@@ -1,0 +1,23 @@
+@import './styles/about.scss';
+@import './styles/card.scss';
+@import './styles/modal.scss';
+@import './styles/contact.scss';
+@import './styles/footer.scss';
+@import './styles/navigation.scss';
+@import './styles/home.scss';
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: calc(70px * 12 + 30px * 11);
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}

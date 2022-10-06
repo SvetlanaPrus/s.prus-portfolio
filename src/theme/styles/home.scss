@@ -1,0 +1,74 @@
+@import "../vars/_colors";
+@import "../vars/_fonts";
+
+.home {
+  padding: 365px 0 65px 0;
+  height: 880px;
+  background: url("../images/home.jpg") no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+    & .block-txt {
+      width: calc(5 * 70px + 4 * 30px);
+
+      & p {
+        margin: 0 0 28px 0;
+        width: fit-content;
+        padding: 0 9px 0 9px;
+        background: rgba(51, 51, 51, 0.8);
+        border-radius: 3px;
+        font-family: $font-Oswald;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $white;
+      }
+
+      & h1 {
+        margin: 0 0 118px 0;
+        font-family: $font-Oswald;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 80px;
+        color: rgba(216, 216, 216, 1);
+      }
+      & .btn-arrow {
+        text-decoration: none;
+        font-family: $font-Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        color: rgba(216, 216, 216, 1);
+        display: flex;
+        align-items: center;
+
+        .circle {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background-color: rgba(216, 216, 216, 1);
+          display: flex;
+          cursor: pointer;
+          margin-right: 16px;
+
+          img {
+            margin: auto;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    & .block-banner {
+      width: calc(5 * 70px + 4 * 30px);
+    }
+
+
+
+}

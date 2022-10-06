@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "eslint:recommended"
+    ],
+//    "parserOptions": {
+//        "ecmaFeatures": {
+//            "jsx": true
+//        },
+//        "ecmaVersion": 11,
+//        "sourceType": "module"
+//    },
+//    "plugins": [
+//        "react"
+//    ],
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/prop-types": "off"
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}

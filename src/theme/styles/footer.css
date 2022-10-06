@@ -1,0 +1,15 @@
+.footer {
+  background: rgb(51, 51, 51);
+  padding: 78px 0 37px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .foot-left {
+  width: 370px;
+}
+.footer .foot-right {
+  width: 370px;
+}
+
+/*# sourceMappingURL=footer.css.map */
