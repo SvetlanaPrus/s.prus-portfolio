@@ -1,0 +1,81 @@
+@import "../vars/_colors";
+@import "../vars/_fonts";
+
+.qualification {
+  width: 100%;
+  min-height: 500px;
+  background: $yellow-light;
+  padding: 70px 0 70px 0;
+
+  & p:first-child {
+    font-family: $font-Oswald;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $black;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0 0 20px 0;
+  }
+
+  & h2 {
+    font-family: $font-Oswald;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 55px;
+    text-align: center;
+    color: $black;
+    margin: 0 0 60px 0;
+  }
+
+  .block {
+    width: 270px;
+    height: 70px;
+
+    & .wrapper-block__img {
+      height: 70px;
+      margin-bottom: 32px;
+    }
+
+    & h4 {
+      margin: 0 0 18px 0;
+      font-family: $font-Oswald;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: $black;
+    }
+
+    & p {
+      margin: 0;
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 32px;
+      color: $grey-dark;
+
+      & ul {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    & ul {
+      margin: 0;
+      font-family: $font-Montserrat;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 32px;
+      color: $grey-dark;
+    }
+  }
+}

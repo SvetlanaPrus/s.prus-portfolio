@@ -1,6 +1,11 @@
 const path = require('path');
 
 module.exports = {
+  watch: false,
+  watchOptions: {
+    // ignored: /node_modules/,
+    ignored: '**/node_modules',
+  },
   stats: { // The stats option lets you precisely control what bundle information gets displayed.
     errorDetails: true, // whether to display the errors
     children: false, // whether to add information about the children
@@ -10,7 +15,9 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js', // входная точка - исходный файл
   output: {
-    path: path.resolve(__dirname, 'public'), // путь к каталогу выходных файлов - папка public
+    // Use the correct separators. I.e. path.resolve(__dirname, 'app/folder')
+    // or path.join(__dirname, 'app', 'folder')
+    path: path.resolve(__dirname, '/public'), // путь к каталогу выходных файлов - папка public
     publicPath: 'auto',
     filename: 'main.js', // название создаваемого файла
   },
@@ -33,7 +40,7 @@ module.exports = {
     rules: [ // загрузчик для jsx
       {
         test: /\.jsx?$/, // определяем тип файлов
-        exclude: /(node_modules)/, // исключаем из обработки папку node_modules
+        exclude: /node_modules/, // исключаем из обработки папку node_modules
         loader: 'babel-loader', // определяем загрузчик, для компиляции из jsx в js необходим компилятор babel
         options: {
           presets: ['@babel/preset-react'], // используемые плагины
@@ -45,27 +52,36 @@ module.exports = {
         use: ['source-map-loader'],
       },
       {
-        test: /\.[s]css$/i,
+        test: /\.(sass|css|scss)$/,
         use: [
           'style-loader',
           'css-loader',
           'resolve-url-loader',
-          'sass-loader',
+          // 'adjust-sourcemap-loader',
           {
-            loader: 'postcss-loader',
+            loader: 'sass-loader',
             options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      // Options
-                    },
-                  ],
-                ],
+              sourceMap: true,
+              sassOptions: {
+                outputStyle: 'compressed',
               },
             },
           },
+          // {
+          //   loader: 'postcss-loader',
+          //   options: {
+          //     postcssOptions: {
+          //       plugins: [
+          //         [
+          //           'postcss-preset-env',
+          //           {
+          //             // Options
+          //           },
+          //         ],
+          //       ],
+          //     },
+          //   },
+          // },
         ],
       },
       {

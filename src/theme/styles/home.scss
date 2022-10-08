@@ -3,11 +3,17 @@
 
 .home {
   padding: 365px 0 65px 0;
-  height: 880px;
+  height: 600px;
   background: url("../images/home.jpg") no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  align-items: center;
+
+  & .home-flex {
+    @extend .flex-container;
+    height: 306px;
 
     & .block-txt {
       width: calc(5 * 70px + 4 * 30px);
@@ -16,7 +22,7 @@
         margin: 0 0 28px 0;
         width: fit-content;
         padding: 0 9px 0 9px;
-        background: rgba(51, 51, 51, 0.8);
+        background: $grey-dark;
         border-radius: 3px;
         font-family: $font-Oswald;
         font-style: normal;
@@ -35,8 +41,9 @@
         font-weight: 700;
         font-size: 72px;
         line-height: 80px;
-        color: rgba(216, 216, 216, 1);
+        color: $white-light;
       }
+
       & .btn-arrow {
         text-decoration: none;
         font-family: $font-Montserrat;
@@ -44,7 +51,7 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 32px;
-        color: rgba(216, 216, 216, 1);
+        color: $white-light;
         display: flex;
         align-items: center;
 
@@ -52,7 +59,7 @@
           width: 48px;
           height: 48px;
           border-radius: 50%;
-          background-color: rgba(216, 216, 216, 1);
+          background-color: $white-light;
           display: flex;
           cursor: pointer;
           margin-right: 16px;
@@ -65,9 +72,71 @@
       }
     }
 
-    & .block-banner {
-      width: calc(5 * 70px + 4 * 30px);
+    & .banner-flex {
+      display: flex;
+      align-items: flex-end;
+
+      & .block-banner {
+        width: calc(5 * 70px + 4 * 30px);
+        height: 192px;
+        background: $yellow-light;
+        border-radius: 3px;
+        display: flex;
+        justify-content: space-between;
+
+        & img {
+          width: calc(2 * 70px + 1 * 30px);
+          height: 192px;
+          border-bottom-left-radius: 3px;
+          border-top-left-radius: 3px;
+        }
+
+        & .banner-txt {
+          width: calc(3 * 70px + 2 * 30px);
+          padding: 27px 0 25px 0;
+          font-style: normal;
+
+          & p:first-child, p:nth-child(2) {
+            font-family: $font-Oswald;
+            line-height: 32px;
+            color: $black;
+          }
+
+          & p:first-child {
+            font-weight: 300;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0 0 7px 0;
+            display: inline-flex;
+            background: $yellow-mid;
+            border-radius: 3px;
+            padding: 0 11px 0 10px;
+          }
+
+          & p:nth-child(2) {
+            font-weight: 700;
+            font-size: 24px;
+            margin: 0;
+            padding: 0 0 45px 0;
+          }
+
+          & .banner-txt-footer h6 {
+            font-family: $font-Montserrat;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: $grey-light;
+            margin: 0 20px 0 0;
+          }
+        }
+      }
     }
+  }
+
+
+
+
 
 
 

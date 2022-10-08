@@ -1,4 +1,5 @@
 import React from 'react';
+import Qualification from './pages/qualifications';
 import Footer from './pages/footer';
 import Contact from './pages/contact';
 import About from './pages/about';
@@ -10,6 +11,7 @@ function App() {
     <div>
       <NavBar />
       <Home />
+      <Qualification />
       <About />
       <Contact />
       <Footer />

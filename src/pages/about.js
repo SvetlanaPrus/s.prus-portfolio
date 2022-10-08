@@ -8,7 +8,7 @@ export default function About() {
     <section className="about-section">
       <div className="container">
         <div className="about-section__header">
-          <p>Colleagues & projects mates</p>
+          <p>Colleagues & Project Co-workers</p>
           <p className="about-section__title animate__animated animate__fadeInDown">About me...</p>
           <p>
             “Great things in business are never done by one person; they’re done by a team of

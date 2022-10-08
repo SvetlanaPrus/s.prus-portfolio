@@ -14,14 +14,18 @@
   & .container {
     width: 604px;
 
-    & a {
+    & .icon-block {
       display:flex;
       justify-content:flex-end;
 
-      & img {
-        max-width: 25px;
-        height: 25px;
-        object-fit: contain;
+      & a {
+        display: inline-flex;
+
+        & img {
+          max-width: 25px;
+          height: 25px;
+          object-fit: contain;
+        }
       }
     }
 
@@ -32,7 +36,7 @@
       font-size: 24px;
       line-height: 32px;
       color: $black;
-      margin: 0;
+      margin: 0 0 5px 0;
     }
 
     & .comment-title {
@@ -42,7 +46,7 @@
       font-size: 16px;
       line-height: 32px;
       color: $grey-mid;
-      margin: 0;
+      margin: 0 0 5px 0;
     }
 
     & .comment-text {

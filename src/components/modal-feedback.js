@@ -5,9 +5,11 @@ function ModalFeedback({ author, handleClick }) {
     <div className="shadow">
       <section className="comment">
         <div className="container">
-          <a className="icon-cross" href="#top" onClick={handleClick}>
-            <img src="./images/cross.svg" alt="" />
-          </a>
+          <div className="icon-block">
+            <a className="icon-cross" href="#top" onClick={handleClick}>
+              <img src="./images/cross.svg" alt="" />
+            </a>
+          </div>
           <p className="comment-author">
             {author.name}
             {' '}
@@ -24,6 +26,14 @@ function ModalFeedback({ author, handleClick }) {
             -
             {' '}
             {author.country}
+            {author.extra
+              ? (
+                <>
+                  <br />
+                  {author.extra}
+                </>
+              )
+              : null}
           </p>
           <p className="comment-text">
             {author.comment}
