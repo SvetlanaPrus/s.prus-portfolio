@@ -20,7 +20,7 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <div className="container">
+      <div className="contact-container">
         <div className="contact-form">
           <p>CONTACT</p>
           <h2>Let`s talk</h2>

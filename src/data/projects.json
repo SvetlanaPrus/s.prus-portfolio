@@ -1,0 +1,30 @@
+[
+  {
+    "id": 100,
+    "name": "English Online School «Catch-up!»",
+    "description": "Private project Nr.1 (Vanilla Javascript & DOM) - English Online School «Catch-up!»",
+    "link": "https://gitlab.com/SvetlanaPrus/svprus-jsb-project1",
+    "picture": "./images/online-english-school.jpg"
+  },
+  {
+    "id": 200,
+    "name": "Billing system",
+    "description": "Private project Nr.2 (Vanilla Javascript & DOM) - Billing system",
+    "link": "https://gitlab.com/SvetlanaPrus/svprus-jsb-project2",
+    "picture": "./images/billing-system.jpg"
+  },
+  {
+    "id": 300,
+    "name": "Weather",
+    "description": "GitHub - SvetlanaPrus/Weather-Redux-API--React-hook-form-",
+    "link": "https://github.com/SvetlanaPrus/Weather-Redux-API--React-hook-form-",
+    "picture": "./images/weather.jpg"
+  },
+  {
+    "id": 400,
+    "name": "Tips-and-Tricks-Redux",
+    "description": "Tips-and-Tricks-Redux",
+    "link": "https://github.com/SvetlanaPrus/Tips-and-Tricks-Redux",
+    "picture": "./images/tips-and-tricks.webp"
+  }
+]

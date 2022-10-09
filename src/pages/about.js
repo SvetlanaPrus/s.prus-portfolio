@@ -20,7 +20,7 @@ export default function About() {
                 dataJson.map((item) => (
                   <Card author={item} key={item.id} />
                 ))
-              }
+          }
         </div>
       </div>
     </section>

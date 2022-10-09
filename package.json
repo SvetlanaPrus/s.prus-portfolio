@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^4.0.31",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "jquery": "^3.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.0",
