@@ -1,4 +1,5 @@
 import React from 'react';
+import History from './pages/history';
 import Qualification from './pages/qualifications';
 import Footer from './pages/footer';
 import Contact from './pages/contact';
@@ -12,6 +13,7 @@ function App() {
       <NavBar />
       <Home />
       <Qualification />
+      <History />
       <About />
       <Contact />
       <Footer />
