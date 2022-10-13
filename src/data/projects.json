@@ -26,5 +26,33 @@
     "description": "Tips-and-Tricks-Redux",
     "link": "https://github.com/SvetlanaPrus/Tips-and-Tricks-Redux",
     "picture": "./images/tips-and-tricks.webp"
+  },
+  {
+    "id": 500,
+    "name": "Under production...",
+    "description": "Under production...",
+    "link": "",
+    "picture": "./images/banner.jpg"
+  },
+  {
+    "id": 600,
+    "name": "Under production...",
+    "description": "Under production...",
+    "link": "",
+    "picture": "./images/banner.jpg"
+  },
+  {
+    "id": 700,
+    "name": "Under production...",
+    "description": "Under production...",
+    "link": "",
+    "picture": "./images/banner.jpg"
+  },
+  {
+    "id": 800,
+    "name": "Under production...",
+    "description": "Under production...",
+    "link": "",
+    "picture": "./images/banner.jpg"
   }
 ]
