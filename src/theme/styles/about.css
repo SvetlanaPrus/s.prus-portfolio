@@ -1,9 +1,64 @@
-.about {
-  padding-top: 68px;
-  padding-bottom: 85px;
+.about-section {
+  padding: 68px 0 85px 0;
+  background-color: rgb(255, 245, 228);
+}
+
+.about-section__header {
+  width: 570px;
+  margin: auto;
+}
+
+.about-section__header p:first-child {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(51, 51, 51);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0;
+}
+
+.about-section__header p:last-child {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.5);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0;
+}
+
+.about-section__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 55px;
+  text-align: center;
+  color: rgb(51, 51, 51);
+  padding: 8px 0 28px 0;
+  margin: 0;
+}
+
+.feedbacks-container {
   display: flex;
-  position: relative;
-  overflow: hidden;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 70px;
+}
+
+.feedbacks-container a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=about.css.map */

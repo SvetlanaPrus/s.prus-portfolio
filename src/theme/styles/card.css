@@ -1,17 +1,88 @@
-/* Error: Undefined variable.
- *   ,
- * 4 |   background-color: $color-1;
- *   |                     ^^^^^^^^
- *   '
- *   card.scss 4:21  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 4 \2502    background-color: $color-1;\d\a   \2502                      ^^^^^^^^\a   \2575 \a   card.scss 4:21  root stylesheet";
+.feedback__card:hover,
+.feedback__card:focus {
+  cursor: pointer;
+  background: rgb(245, 166, 35);
+  transform: perspective(1000px) translate3d(0, 0, 50px);
+  box-shadow: -3px -3px 35px rgba(85, 85, 85, 0.7);
 }
+
+.feedback__card {
+  width: 370px;
+  height: 352px;
+  margin-bottom: 30px;
+  display: block;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feedback__card:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
+.feedback__card:hover .feedback__name, .feedback__card:hover .feedback__title {
+  color: white;
+}
+
+.feedback__img {
+  width: 370px;
+  height: 240px;
+  z-index: 1;
+}
+
+.wrapper__img {
+  width: 370px;
+  height: 240px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.wrapper__img .card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.picture {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.feedback__text {
+  padding: 16px 32px 16px 32px;
+  text-decoration: none;
+}
+
+.feedback__text p {
+  margin: 0;
+}
+
+.feedback__name {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: rgb(51, 51, 51);
+}
+
+.feedback__title {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+/*# sourceMappingURL=card.css.map */
