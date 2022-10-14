@@ -97,6 +97,11 @@ module.exports = {
         type: 'json',
         use: ['file-loader'],
       },
+      {
+        test: /stories\/(.+).tsx$/,
+        loader: '@storybook/addon-storysource/loader',
+        enforce: 'pre',
+      },
     ],
   },
 };

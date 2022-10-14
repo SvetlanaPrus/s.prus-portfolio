@@ -1,4 +1,5 @@
 import React from 'react';
+import Portfolio from './pages/portfolio/portfolio';
 import History from './pages/history';
 import Qualification from './pages/qualifications';
 import Footer from './pages/footer';
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <Qualification />
       <History />
+      <Portfolio />
       <About />
       <Contact />
       <Footer />

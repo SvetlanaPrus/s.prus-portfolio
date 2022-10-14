@@ -54,8 +54,7 @@
 }
 
 .feedbacks-container {
-  display: flex;
-  justify-content: space-between;
+  @extend .flex-container;
   flex-wrap: wrap;
   padding-top: 70px;
 }

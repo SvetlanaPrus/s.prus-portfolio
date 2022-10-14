@@ -20,7 +20,7 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <div className="container">
+      <div className="contact-container">
         <div className="contact-form">
           <p>CONTACT</p>
           <h2>Let`s talk</h2>
@@ -73,7 +73,7 @@ export default function Contact() {
               width="600"
               height="450"
               style={{ border: 0 }}
-              allowFullScreen=""
+              // allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
