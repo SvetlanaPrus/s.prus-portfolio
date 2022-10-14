@@ -738,7 +738,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
-  color: rgb(51, 51, 51);
+  color: rgba(51, 51, 51, 0.5);
   display: flex;
   align-items: center;
 }
@@ -757,7 +757,7 @@
 }
 
 .portfolio {
-  padding: 45px 0 90px 0;
+  padding: 45px 0 65px 0;
 }
 .portfolio .portfolio-section__header {
   display: grid;
@@ -782,7 +782,7 @@
   font-size: 16px;
   line-height: 32px;
   text-align: center;
-  color: rgba(51, 51, 51, 0.5);
+  color: rgba(51, 51, 51, 0.7);
 }
 .portfolio .portfolio-section__header p:first-child {
   width: auto;

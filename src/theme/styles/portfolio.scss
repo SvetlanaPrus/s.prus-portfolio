@@ -2,7 +2,7 @@
 @import "../vars/_fonts";
 
 .portfolio {
-  padding: 45px 0 90px 0;
+  padding: 45px 0 65px 0;
 
   & .portfolio-section__header {
     display: grid;
@@ -28,7 +28,7 @@
       font-size: 16px;
       line-height: 32px;
       text-align: center;
-      color: $grey-mid;
+      color: $grey-dark;
     }
 
     & p:first-child {

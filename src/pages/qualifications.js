@@ -11,7 +11,7 @@ export default function Qualification() {
             <div className="wrapper-block__img">
               <img src="./images/full-stack-developer.svg" alt="icon" />
             </div>
-            <h4>Professionalism:</h4>
+            <h4>Competence:</h4>
             <p>
               Proficient and have good knowledge in HTML / CSS, SCSS, Javascript and React.
               Have experience in Typescript, jQuery, Redux, Tailwind CSS, Bootstrap, Figma.
@@ -37,7 +37,7 @@ export default function Qualification() {
             <div className="wrapper-block__img">
               <img src="./images/online-education.svg" alt="icon" />
             </div>
-            <h4>Qualifications:</h4>
+            <h4>Qualification:</h4>
             <p>
               <strong>Bachelor`s degree (5 yrs.)</strong>
               <br />
@@ -52,8 +52,8 @@ export default function Qualification() {
             </div>
             <h4>Personal traits:</h4>
             <p>
-              Flexible and can-do attitude, positive, driven and open-minded, team-player,
-              structured and goal-oriented, love solving problems
+              I am passionate about frontend development, love coding, and not afraid to jump
+              into the unknown. A good team-player, motivated, driven and open-minded.
             </p>
           </div>
         </div>

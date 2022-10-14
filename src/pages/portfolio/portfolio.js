@@ -10,7 +10,7 @@ export default function Portfolio() {
       <div className="container">
         <div className="portfolio-section__header">
           <p>PORTFOLIO</p>
-          <h2>Find out about my possibilities</h2>
+          <h2>My first projects...</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa molestie
             faucibus consectetur ac, sit orci massa.
@@ -25,7 +25,30 @@ export default function Portfolio() {
           {dataJson.map((el) => (
             <div key="el.id">
               <img src={`${el.picture}`} alt="" />
-              <p className="legend">{el.description}</p>
+              <p className="legend">
+                <p><strong>{el.name}</strong></p>
+                <p>
+                  <strong>
+                    Link:
+                    {' '}
+                  </strong>
+                  <a href={el.link}>{el.link}</a>
+                </p>
+                <br />
+                <ul>
+                  <li>
+                    <strong>Tech Stack:</strong>
+                    {' '}
+                    {el['tech-stack']}
+                  </li>
+                  <li>
+                    <strong>Description & target:</strong>
+                    <br />
+                    {' '}
+                    {el.description}
+                  </li>
+                </ul>
+              </p>
             </div>
           ))}
         </Carousel>
