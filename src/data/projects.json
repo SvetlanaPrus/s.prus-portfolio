@@ -1,0 +1,66 @@
+[
+  {
+    "id": 100,
+    "name": "English Online School «Catch-up!»",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://gitlab.com/SvetlanaPrus/svprus-jsb-project1",
+    "tech-stack": "Vanilla Javascript & DOM",
+    "picture": "./images/online-english-school.jpg"
+  },
+  {
+    "id": 200,
+    "name": "Billing system",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://gitlab.com/SvetlanaPrus/svprus-jsb-project2",
+    "tech-stack": "Vanilla Javascript & DOM",
+    "picture": "./images/billing-system.jpg"
+  },
+  {
+    "id": 300,
+    "name": "Weather",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/Weather-Redux-API--React-hook-form-",
+    "tech-stack": "Javascript, React, Redux, API, React-hook-form",
+    "picture": "./images/weather.jpg"
+  },
+  {
+    "id": 400,
+    "name": "Tips-and-Tricks",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/Tips-and-Tricks-Redux",
+    "tech-stack": "Javascript, React, Redux",
+    "picture": "./images/tips-and-tricks.webp"
+  },
+  {
+    "id": 500,
+    "name": "Under construction...",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "n/a",
+    "tech-stack": "n/a",
+    "picture": "./images/under-construction.png"
+  },
+  {
+    "id": 600,
+    "name": "Under construction...",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "n/a",
+    "tech-stack": "n/a",
+    "picture": "./images/under-construction.png"
+  },
+  {
+    "id": 700,
+    "name": "Under construction...",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "n/a",
+    "tech-stack": "n/a",
+    "picture": "./images/under-construction.png"
+  },
+  {
+    "id": 800,
+    "name": "Under construction...",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "n/a",
+    "tech-stack": "n/a",
+    "picture": "./images/under-construction.png"
+  }
+]

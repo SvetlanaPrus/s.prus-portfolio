@@ -19,9 +19,11 @@ export default function History() {
               parturient faucibus quam nunc. Amet, nam pellentesque erat quis elementum congue
               lectus aliquet dictumst. Faucibus sapien faucibus massa urna.
             </p>
-            <a className="btn-arrow" href="#top">
+            <a className="btn-arrow" href="./images/CV.pdf" target="_blank" rel="noopener noreferrer">
               <div className="circle"><img src="./images/angle-right-16.png" alt="arrow" /></div>
               Download CV
+              <br />
+              (Last updated: August 2022)
             </a>
           </div>
         </div>

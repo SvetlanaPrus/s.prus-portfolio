@@ -20,7 +20,17 @@
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
   {
-    "id": 116,
+    "id": 113,
+    "name": "Dmytro",
+    "surname": "Yaryhin",
+    "title": "Frontend Developer",
+    "company": "Itera",
+    "country": "Norway",
+    "path": "./images/dmytro.jpg",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
+  },
+  {
+    "id": 114,
     "name": "Anuradha",
     "surname": "Sridharan",
     "title": "Test/Project Leader",
@@ -30,9 +40,8 @@
     "path": "./images/anuradha.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
-
   {
-    "id": 114,
+    "id": 115,
     "name": "Ivan",
     "surname": "Karnaukhov",
     "title": "React Developer",
@@ -43,7 +52,7 @@
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
   {
-    "id": 115,
+    "id": 116,
     "name": "Gala",
     "surname": "Malareva",
     "title": "Frontend Developer",
@@ -51,17 +60,6 @@
     "company": "Terberg Business Mobility",
     "country": "Netherlands",
     "path": "./images/galja.jpg",
-    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
-  },
-  {
-    "id": 113,
-    "name": "Natalya",
-    "surname": "Myunster",
-    "title": "Frontend Developer",
-    "extra": "prev. - PASV & Lectrum bootcamps, Project Co-worker",
-    "company": "Vidiemme",
-    "country": "Italy",
-    "path": "./images/anonym.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   }
 ]

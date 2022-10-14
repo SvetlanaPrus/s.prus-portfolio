@@ -4,14 +4,15 @@
 .contact {
   padding: 139px 0 128px 0;
 
-  & .container {
+  & .contact-container {
+    @extend .container;
+    @extend .flex-container;
     height: 624px;
-    display: flex;
-    justify-content: space-between;
 
     & .contact-form {
       width: calc(4 * 70px + 3 * 30px);
       display: inline-block;
+      font-style: normal;
 
       & p:first-child {
         margin: 0;
@@ -19,9 +20,7 @@
         padding: 0 9px 0 9px;
         background-color: $yellow-light;
         border-radius: 3px;
-
         font-family: $font-Oswald;
-        font-style: normal;
         font-weight: 300;
         font-size: 18px;
         line-height: 32px;
@@ -33,7 +32,6 @@
       & .obs {
         margin: 0 0 32px 0;
         font-family: $font-Montserrat;
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 32px;
@@ -43,7 +41,6 @@
 
       & h2 {
         font-family: $font-Oswald;
-        font-style: normal;
         font-weight: 700;
         font-size: 56px;
         line-height: 64px;
@@ -60,7 +57,6 @@
           border-radius: 3px;
           padding: 8px 16px;
           font-family: $font-Montserrat;
-          font-style: normal;
           font-weight: 400;
           font-size: 16px;
           line-height: 32px;
@@ -74,7 +70,6 @@
           margin-bottom: 32px;
           padding: 8px 16px;
           font-family: $font-Montserrat;
-          font-style: normal;
           font-weight: 400;
           font-size: 16px;
           line-height: 32px;
@@ -89,7 +84,6 @@
           border: none;
           padding: 0;
           font-family: $font-Oswald;
-          font-style: normal;
           font-weight: 700;
           font-size: 20px;
           line-height: 30px;
