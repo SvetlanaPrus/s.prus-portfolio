@@ -24,3 +24,13 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.dummy-content {
+  margin: auto;
+}
+.scroll-container {
+  position: fixed;
+  will-change: transform;
+  right: 0;
+  left: 0;
+}
+

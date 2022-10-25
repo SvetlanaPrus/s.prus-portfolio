@@ -23,12 +23,17 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/prop-types": "off",
         "react/jsx-indent": ["error", 2],
-        "linebreak-style": 0
-    },
-    "settings": {
-        "react": {
-            "pragma": "React",
-            "version": "detect"
-        }
+        "linebreak-style": 0,
+        "no-shadow": "off"
+
+//        "@typescript-eslint/type-annotation-spacing": ["warn", {
+//            "before": true,
+//            "after": true
+//        }]
+//        "settings": {
+//        "react": {
+//            "pragma": "React",
+//            "version": "detect"
+//        }}
     }
 }
