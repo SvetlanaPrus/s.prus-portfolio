@@ -1,4 +1,5 @@
 import React from 'react';
+import BtnTop from './components/top-button';
 import ScrollContainer from './components/scroll/ScrollContainer';
 import PagesContent from './components/scroll/PagesContent';
 import Portfolio from './pages/portfolio/portfolio';
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <BtnTop />
       <ScrollContainer scrollIntertia={scrollIntertia}>
         <PagesContent content={pages} />
       </ScrollContainer>
