@@ -8,6 +8,7 @@
 @import './styles/qualification.scss';
 @import './styles/history.scss';
 @import './styles/portfolio.scss';
+@import './styles/top-button.scss';
 
 body {
   margin: 0 auto;
@@ -24,13 +25,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .dummy-content {
   margin: auto;
 }
+
 .scroll-container {
   position: fixed;
   will-change: transform;
   right: 0;
   left: 0;
 }
-
