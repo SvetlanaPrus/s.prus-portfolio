@@ -12,10 +12,13 @@ export default function Qualification() {
               <img src="./images/full-stack-developer.svg" alt="icon" />
             </div>
             <h4>Competence:</h4>
-            <p>
-              Proficient and have good knowledge in HTML / CSS, SCSS, Javascript and React.
-              Have experience in Typescript, jQuery, Redux, Tailwind CSS, Bootstrap, Figma.
-            </p>
+            <ul>
+              <li>HTML, CSS, SCSS, Figma</li>
+              <li>jQuery, Javascript, React</li>
+              <li>Bootstrap, Material UI, Ant Design</li>
+            </ul>
+            <p><strong>Some experience:</strong></p>
+            <p>Typescript, Tailwind CSS, API, Redux, MobX ...</p>
           </div>
           <div className="block">
             <div className="wrapper-block__img">

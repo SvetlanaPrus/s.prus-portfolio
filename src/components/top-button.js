@@ -14,7 +14,6 @@ export default function BtnTop() {
     opacity: isScroll ? 1 : 0,
     visibility: isScroll ? 1 : 0,
   });
-
   return (
     <animated.a style={effect} id="btnTop" href="#top">
       <div className="circle">

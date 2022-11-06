@@ -1,6 +1,10 @@
 import React from 'react';
+import scrollToSection from '../helpers/scrollToSection';
+import { useSection } from '../helpers/context';
 
 export default function Home() {
+  // eslint-disable-next-line no-unused-vars
+  const [portfolioSection, _] = useSection();
   return (
     <section className="home">
       <div className="container">
@@ -8,10 +12,12 @@ export default function Home() {
           <div className="block-txt">
             <p>1.5+ years experience</p>
             <h1>Build dream</h1>
-            <a className="btn-arrow" href="#top">
-              <div className="circle"><img src="./images/angle-right-16.png" alt="arrow" /></div>
+            <div className="btn-arrow">
+              <button className="circle" onClick={() => scrollToSection(portfolioSection)} type="button">
+                <img src="./images/angle-right-16.png" alt="arrow" />
+              </button>
               See projects
-            </a>
+            </div>
           </div>
           <div className="banner-flex">
             <div className="block-banner">

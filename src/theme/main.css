@@ -336,7 +336,10 @@
   color: rgb(255, 255, 255);
   display: inline-block;
 }
-.footer .foot-left h2 {
+.footer .foot-left a:first-child {
+  text-decoration: none;
+}
+.footer .foot-left a h2 {
   margin: 0 0 34px 0;
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -474,7 +477,7 @@
 .navigation .media-block .circle img {
   margin: auto;
 }
-.navigation .media-block a:last-child {
+.navigation .media-block button {
   width: 106px;
   height: 48px;
   background: rgba(51, 51, 51, 0.5);
@@ -615,7 +618,7 @@
 
 .qualification {
   width: 100%;
-  min-height: 500px;
+  min-height: 550px;
   background: rgb(255, 245, 228);
   padding: 70px 0 70px 0;
 }

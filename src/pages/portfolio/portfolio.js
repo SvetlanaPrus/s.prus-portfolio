@@ -1,12 +1,15 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Carousel } from 'react-responsive-carousel';
+import { useSection } from '../../helpers/context';
 import dataJson from '../../data/projects.json';
 import './portfolio-carousel.scss';
 
 export default function Portfolio() {
+  // eslint-disable-next-line no-unused-vars
+  const [portfolioSection, _] = useSection();
   return (
-    <section className="portfolio">
+    <section className="portfolio" ref={portfolioSection}>
       <div className="container">
         <div className="portfolio-section__header">
           <p>PORTFOLIO</p>
@@ -43,7 +46,6 @@ export default function Portfolio() {
                   </li>
                   <li>
                     <strong>Description & target:</strong>
-                    <br />
                     {' '}
                     {el.description}
                   </li>
