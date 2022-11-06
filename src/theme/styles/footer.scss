@@ -10,7 +10,11 @@
     color: $white;
     display: inline-block;
 
-    & h2 {
+    & a:first-child {
+      text-decoration: none;
+    }
+
+    & a h2 {
       margin: 0 0 34px 0;
       font-family: $font-Oswald;
       font-style: normal;

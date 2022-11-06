@@ -1,17 +1,18 @@
-/* Error: Undefined variable.
- *    ,
- * 12 |     background-color: $white-light;
- *    |                       ^^^^^^^^^^^^
- *    '
- *   top-button.scss 12:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 12 \2502      background-color: $white-light;\d\a    \2502                        ^^^^^^^^^^^^\a    \2575 \a   top-button.scss 12:23  root stylesheet";
+#btnTop {
+  bottom: 40px;
+  right: 40px;
+  position: fixed;
+  transition: all 0.4s;
+  z-index: 100;
 }
+#btnTop .circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=top-button.css.map */

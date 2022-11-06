@@ -1,9 +1,12 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useSection } from '../helpers/context';
 
 (function () { emailjs.init('4fIqsUhl3sTPHOf45'); }());
 
 export default function Contact() {
+  // eslint-disable-next-line no-unused-vars
+  const [_, contactSection] = useSection();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -19,7 +22,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" ref={contactSection}>
       <div className="contact-container">
         <div className="contact-form">
           <p>CONTACT</p>

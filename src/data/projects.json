@@ -2,7 +2,7 @@
   {
     "id": 100,
     "name": "English Online School «Catch-up!»",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "description": "08.2021 Javascript-bootcamp \"Lectrum\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
     "link": "https://gitlab.com/SvetlanaPrus/svprus-jsb-project1",
     "tech-stack": "Vanilla Javascript & DOM",
     "picture": "./images/online-english-school.jpg"
@@ -10,7 +10,7 @@
   {
     "id": 200,
     "name": "Billing system",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "description": "07.2021 Javascript-bootcamp \"Lectrum\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
     "link": "https://gitlab.com/SvetlanaPrus/svprus-jsb-project2",
     "tech-stack": "Vanilla Javascript & DOM",
     "picture": "./images/billing-system.jpg"
@@ -18,7 +18,7 @@
   {
     "id": 300,
     "name": "Weather",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "description": "06.2021 React-bootcamp \"Lectrum\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
     "link": "https://github.com/SvetlanaPrus/Weather-Redux-API--React-hook-form-",
     "tech-stack": "Javascript, React, Redux, API, React-hook-form",
     "picture": "./images/weather.jpg"
@@ -26,41 +26,65 @@
   {
     "id": 400,
     "name": "Tips-and-Tricks",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "description": "06.2021 React-bootcamp \"Lectrum\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
     "link": "https://github.com/SvetlanaPrus/Tips-and-Tricks-Redux",
     "tech-stack": "Javascript, React, Redux",
     "picture": "./images/tips-and-tricks.webp"
   },
   {
     "id": 500,
-    "name": "Under construction...",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
-    "link": "n/a",
-    "tech-stack": "n/a",
-    "picture": "./images/under-construction.png"
+    "name": "Kanban-2",
+    "description": "03.2021 React-bootcamp \"PASV\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/Kanban-axios",
+    "tech-stack": "Javascript, React, Router, Link, Axios, useHistory, Redirect, Material-UI, \nAnt Design\n",
+    "picture": "./images/kanban-2.jpg"
+  },
+  {
+    "id": 501,
+    "name": "Kanban-1",
+    "description": "03.2021 React-bootcamp \"PASV\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/fe10-kanban-fetch-Origin.git",
+    "tech-stack": "Javascript, React, useEffect, useState, Material-ui, Fetch",
+    "picture": "./images/kanban-1.jpg"
   },
   {
     "id": 600,
-    "name": "Under construction...",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
-    "link": "n/a",
-    "tech-stack": "n/a",
-    "picture": "./images/under-construction.png"
+    "name": "Memory Game",
+    "description": "02.2021 React-bootcamp \"PASV\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/FE9-Memory-Ver1",
+    "tech-stack": "Javascript, React",
+    "picture": "./images/memo.jpg"
   },
   {
     "id": 700,
-    "name": "Under construction...",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
-    "link": "n/a",
-    "tech-stack": "n/a",
-    "picture": "./images/under-construction.png"
+    "name": "Record keeping system",
+    "description": "02.2021 React-bootcamp \"PASV\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/fe9-Record-Keeping-System-Ver.1.git",
+    "tech-stack": "Javascript, React",
+    "picture": "./images/record-system.jpg"
   },
   {
     "id": 800,
-    "name": "Under construction...",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
-    "link": "n/a",
-    "tech-stack": "n/a",
-    "picture": "./images/under-construction.png"
+    "name": "To-do List (adv.)",
+    "description": "03.2021 React-bootcamp \"PASV\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/fe10-todo-useeffect-fetch",
+    "tech-stack": "Javascript, React, fetch, useEffect, useState, Bootstrap, Material-UI, Accordion",
+    "picture": "./images/to-do-list-2.jpg"
+  },
+  {
+    "id": 801,
+    "name": "Shopping List (to-do-list principles)",
+    "description": "01.2021 React-bootcamp \"PASV\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/FE9-ToDoList-Ver.2.git",
+    "tech-stack": "Javascript, React",
+    "picture": "./images/shopping-list.webp"
+  },
+  {
+    "id": 802,
+    "name": "To-do List (simple)",
+    "description": "01.2021 React-bootcamp \"PASV\". Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n ",
+    "link": "https://github.com/SvetlanaPrus/fe10-todo-function.git",
+    "tech-stack": "Javascript, React, useState",
+    "picture": "./images/to-do-list.jpg"
   }
 ]
