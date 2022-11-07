@@ -2,6 +2,7 @@
   "name": "profile",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://SvetlanaPrus.github.io/s.prus-portfolio",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@react-spring/core": "^9.5.5",
@@ -29,7 +30,8 @@
     "dev": "webpack serve",
     "build": "webpack",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "env": {
@@ -77,6 +79,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "node-sass": "^7.0.3",
     "postcss": "^8.4.17",
     "postcss-loader": "^7.0.1",
