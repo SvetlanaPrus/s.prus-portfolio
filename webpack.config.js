@@ -1,12 +1,12 @@
 const path = require('path');
-// const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -37,7 +37,6 @@ const cssLoaders = (extra) => {
       loader: 'resolve-url-loader',
       options: {
         sourceMap: true,
-        // join: (uri, base) => path.join('../..', base, uri);
       },
     },
   ];
@@ -49,32 +48,8 @@ const cssLoaders = (extra) => {
   return loaders;
 };
 
-module.exports = {
-  // watch: false,
-  // watchOptions: {
-  //   // ignored: /node_modules/,
-  //   ignored: '**/node_modules',
-  // },
-  // stats: { // The stats option lets you precisely control what bundle information gets displayed.
-  //   errorDetails: true, // whether to display the errors
-  //   children: false, // whether to add information about the children
-  //   outputPath: true, // Tells stats to show the outputPath
-  //   publicPath: true, // Tells stats to show the publicPath
-  // },
-
-  mode: 'development',
-  entry: './src/index.js', // входная точка - исходный файл
-  output: {
-    // With optimization, we should use [name] =>
-    filename: '[name].js', // название создаваемого файла, by default main.js
-    // Use the correct separators. I.e. path.resolve(__dirname, 'app/folder')
-    // or path.join(__dirname, 'app', 'folder')
-    path: path.resolve(__dirname, 'dist'), // путь к каталогу выходных файлов
-  },
-
-  optimization: optimization(),
-
-  plugins: [
+const plugins = () => {
+  const base = [
     new HTMLWebpackPlugin({
       template: './public/index.html',
       minify: {
@@ -82,45 +57,54 @@ module.exports = {
       },
     }),
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: path.resolve(__dirname, 'src/theme/images/home.jpg'), to: path.resolve(__dirname, 'dist') },
-      ],
-    }),
+    // In order to copy static file =>
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src/theme/images/home.jpg'),
+    //       to: path.resolve(__dirname, 'dist'),
+    //     },
+    //   ],
+    // }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
     () => (isDev ? new ESLintPlugin() : null),
-  ],
+  ];
+  // For analyze libraries; check port:8888 =>
+  // if (isProd) {
+  //   base.push(new BundleAnalyzerPlugin());
+  // }
 
+  return base;
+};
+
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js', // входная точка - исходный файл
+  output: {
+    // With optimization, we should use [name] =>
+    filename: '[name].js', // название создаваемого файла, by default - main.js
+    path: path.resolve(__dirname, 'dist'), // путь к каталогу выходных файлов
+  },
+  optimization: optimization(),
+  plugins: plugins(),
   resolve: {
     extensions: ['.js', '.json', '.jpg', '.scss', '.png', '.svg', '.pdf', '.webp'],
+    // Path pattern. It helps by using it in another files.
     // alias: {
     //   '@images': resolvePath('src/theme/images'),
     // },
   },
-
+  // devServer определяют конфигурацию запускаемого веб-сервера
   devServer: {
     port: 4200,
     hot: isDev,
-    // devServer определяют конфигурацию запускаемого веб-сервера,
-    // на котором будет развертываться тестируемое приложение.
-    // historyApiFallback: true, // указывает, что будет использоваться HTML5 History API.
-    // Это может быть полезно, если приложение использует маршрутизацию.
-    // static: { // static устанавает настройки для статических файлов. В данном случае эта секция
-    // // нам нужна для установки каталога, где располагается файл index.html.
-    //   directory: path.join(__dirname, '/public'), // в данном случае это корневой
-    //   каталог проекта, поэтому применяется путь "/"},
-    //   port: 4200, // веб-сервер будет запускаться на порту 3000,
-    //   // то есть к приложению мы сможем обратиться по адресу http://localhost:3000. А опция open: true
-    //   open: true, // указывает, что при запуске веб-сервера приложение будет автоматически
-    //   // открываться в веб-браузере.
-    // },
   },
-
+  devtool: isDev ? 'source-map' : false, // initial maps
+  // Для загрузки файлов в webpack необходимы загрузчики, которые определяют правила
+  // загрузки и обработки файлов.
   module: {
-    // Для загрузки файлов в webpack необходимы загрузчики, которые определяют правила
-    // загрузки и обработки файлов.
     rules: [
       {
         test: /\.jsx?$/, // загрузчик для jsx
@@ -130,11 +114,6 @@ module.exports = {
           presets: ['@babel/preset-react'], // используемые плагины
         },
       },
-      // {
-      //   test: /\.js$/,
-      //   enforce: 'pre',
-      //   use: ['source-map-loader'],
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -167,18 +146,10 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg|webp)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: (f) => {
-              const dirNameInsideAssets = path.relative(
-                path.join(__dirname, 'src/theme'),
-                path.dirname(f),
-              );
-              return `${dirNameInsideAssets}/[name].[ext]`;
-            },
-          },
-        }],
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name].[ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,

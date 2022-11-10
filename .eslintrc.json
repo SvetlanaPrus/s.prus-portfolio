@@ -25,15 +25,5 @@
         "react/jsx-indent": ["error", 2],
         "linebreak-style": 0,
         "no-shadow": "off"
-
-//        "@typescript-eslint/type-annotation-spacing": ["warn", {
-//            "before": true,
-//            "after": true
-//        }]
-//        "settings": {
-//        "react": {
-//            "pragma": "React",
-//            "version": "detect"
-//        }}
     }
 }
