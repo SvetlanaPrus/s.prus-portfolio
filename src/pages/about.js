@@ -1,5 +1,4 @@
 import React from 'react';
-import 'animate.css';
 import dataJson from '../data/data.json';
 import Card from '../components/card';
 

@@ -501,9 +501,7 @@
 .home {
   padding: 365px 0 65px 0;
   height: 600px;
-  background: url("../images/home.jpg") no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background: url("../images/home.jpg") no-repeat fixed center center;
   background-size: cover;
   display: flex;
   align-items: center;

@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { useSection } from '../../helpers/context';
 import dataJson from '../../data/projects.json';
 import './portfolio-carousel.scss';
+import getProjectPicture from '../../helpers/getProjectPicture';
 
 export default function Portfolio() {
   // eslint-disable-next-line no-unused-vars
@@ -27,7 +28,7 @@ export default function Portfolio() {
         >
           {dataJson.map((el) => (
             <div key="el.id">
-              <img src={`${el.picture}`} alt="" />
+              {getProjectPicture(el.id)}
               <p className="legend">
                 <p><strong>{el.name}</strong></p>
                 <p>

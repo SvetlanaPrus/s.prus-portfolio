@@ -1,4 +1,8 @@
 import React from 'react';
+import IconDeveloper from '../theme/images/full-stack-developer.svg';
+import IconEndorsement from '../theme/images/endorsement.svg';
+import IconEducation from '../theme/images/online-education.svg';
+import IconGirl from '../theme/images/profile-girl.svg';
 
 export default function Qualification() {
   return (
@@ -9,7 +13,7 @@ export default function Qualification() {
         <div className="flex-container">
           <div className="block">
             <div className="wrapper-block__img">
-              <img src="./images/full-stack-developer.svg" alt="icon" />
+              <img src={IconDeveloper} alt="icon" />
             </div>
             <h4>Competence:</h4>
             <ul>
@@ -22,7 +26,7 @@ export default function Qualification() {
           </div>
           <div className="block">
             <div className="wrapper-block__img">
-              <img src="./images/endorsement.svg" alt="icon" />
+              <img src={IconEndorsement} alt="icon" />
             </div>
             <h4>Certifications:</h4>
             <p><strong>Microsoft Azure Certified:</strong></p>
@@ -38,7 +42,7 @@ export default function Qualification() {
           </div>
           <div className="block">
             <div className="wrapper-block__img">
-              <img src="./images/online-education.svg" alt="icon" />
+              <img src={IconEducation} alt="icon" />
             </div>
             <h4>Qualification:</h4>
             <p>
@@ -51,7 +55,7 @@ export default function Qualification() {
           </div>
           <div className="block">
             <div className="wrapper-block__img">
-              <img src="./images/profile-girl.svg" alt="icon" />
+              <img src={IconGirl} alt="icon" />
             </div>
             <h4>Personal traits:</h4>
             <p>
