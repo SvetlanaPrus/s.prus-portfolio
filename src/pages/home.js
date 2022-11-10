@@ -1,6 +1,8 @@
 import React from 'react';
 import scrollToSection from '../helpers/scrollToSection';
 import { useSection } from '../helpers/context';
+import ArrowRight from '../theme/images/angle-right-16.png';
+import Banner from '../theme/images/banner.jpg';
 
 export default function Home() {
   // eslint-disable-next-line no-unused-vars
@@ -14,14 +16,14 @@ export default function Home() {
             <h1>Build dream</h1>
             <div className="btn-arrow">
               <button className="circle" onClick={() => scrollToSection(portfolioSection)} type="button">
-                <img src="./images/angle-right-16.png" alt="arrow" />
+                <img src={ArrowRight} alt="arrow" />
               </button>
               See projects
             </div>
           </div>
           <div className="banner-flex">
             <div className="block-banner">
-              <img src="./images/banner.jpg" alt="banner" />
+              <img src={Banner} alt="banner" />
               <div className="banner-txt">
                 <p>LAST PROJECT</p>
                 <p>Own CV-site development</p>

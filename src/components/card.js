@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import 'animate.css';
 import { useSpring, animated } from 'react-spring';
+import getAuthorPicture from '../helpers/getAuthorPicture';
 import ModalFeedback from './modal-feedback';
 
 let increment = 0;
@@ -15,10 +15,6 @@ function Card({ author }) {
     },
     delay: increment += 250,
   });
-  // Comment: Webpack будет читать из папки public, которую указал,
-  // при добавлении файлов прописывай всегда "./"
-  // кладем изображения в папку public и обращаемся к ним просто по названию файла img
-  // src= "sveta.jpg"
 
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
@@ -29,7 +25,7 @@ function Card({ author }) {
     <>
       <animated.div className="feedback feedback__card" style={styles} onClick={handleClick}>
         <div className="wrapper__img picture">
-          <img src={`${author.path}`} alt="feedback" />
+          {getAuthorPicture(author.name)}
           <div className="card-overlay" />
         </div>
         <div className="feedback__text">

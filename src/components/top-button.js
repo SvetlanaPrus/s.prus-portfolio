@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { animated, useSpring } from 'react-spring';
+import ButtonToTop from '../theme/images/double-up.svg';
 
 export default function BtnTop() {
   const [isScroll, setIsScroll] = useState(false);
@@ -17,7 +18,7 @@ export default function BtnTop() {
   return (
     <animated.a style={effect} id="btnTop" href="#top">
       <div className="circle">
-        <img src="./images/double-up.svg" alt="btn-top" />
+        <img src={ButtonToTop} alt="btn-top" />
       </div>
     </animated.a>
   );

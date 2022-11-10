@@ -6,7 +6,6 @@
     "title": "Team Lead",
     "company": "Itera",
     "country": "Norway",
-    "path": "./images/kim.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
   {
@@ -16,7 +15,6 @@
     "title": "Consultant",
     "company": "Itera",
     "country": "Norway",
-    "path": "./images/william.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
   {
@@ -26,7 +24,6 @@
     "title": "Frontend Developer",
     "company": "Itera",
     "country": "Norway",
-    "path": "./images/dmytro.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
   {
@@ -37,7 +34,6 @@
     "extra": "ODA Mentor",
     "company": "Elhub",
     "country": "Norway",
-    "path": "./images/anuradha.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
   {
@@ -48,7 +44,6 @@
     "extra": "prev. - PASV & Lectrum bootcamps, Project Co-worker",
     "company": "Cognizant",
     "country": "California, United States",
-    "path": "./images/ivan.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   },
   {
@@ -59,7 +54,6 @@
     "extra": "prev. - PASV & Lectrum bootcamps, Project Co-worker",
     "company": "Terberg Business Mobility",
     "country": "Netherlands",
-    "path": "./images/galja.jpg",
     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Massa molestie faucibus consectetur ac, sit orci massa. Lectus habitant leo,\n        semper feugiat convallis parturient faucibus quam nunc. Amet,\n        nam pellentesque erat quis elementum congue lectus aliquet dictumst.\n        Faucibus sapien faucibus massa urna."
   }
 ]
