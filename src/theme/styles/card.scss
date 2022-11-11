@@ -2,9 +2,6 @@
 @import '../vars/_fonts.scss';
 @import "../effects/card-effects";
 
-//Comment: Webpack будет читать из папки public, которую указал, при добавлении файлов прописывай всегда "./"
-//кладем изображения в папку public и обращаемся к ним просто по названию файла img src= "sveta.jpg"
-
 .feedback__card {
   width: 370px;
   height: 352px;
