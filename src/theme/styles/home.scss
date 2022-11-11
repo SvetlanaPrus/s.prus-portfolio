@@ -1,15 +1,11 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
 
-//$background-picture-path: "../images/home.jpg";
-//background-image: url('~../images/home.jpg');
-
 .home {
   padding: 365px 0 65px 0;
   height: 600px;
+  // look with respect to: ".." = "src\theme" =>
   background: url('../images/home.jpg') no-repeat fixed center center;
-  //background: url("../images/home.jpg") no-repeat fixed center center;
-  //background: url('~../theme/images/home.jpg') no-repeat fixed center center;
   background-size: cover;
   display: flex;
   align-items: center;
