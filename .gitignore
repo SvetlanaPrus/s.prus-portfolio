@@ -11,6 +11,7 @@
 
 # production
 /dist
+/.temporary_cache
 
 # misc
 .DS_Store

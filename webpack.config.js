@@ -51,7 +51,6 @@ const cssLoaders = (extra) => {
 const plugins = () => {
   const base = [
     new HTMLWebpackPlugin({
-      // template: './docs/index.html',
       template: './docs/index.html',
       minify: {
         collapseWhitespace: isProd ? true : null,
@@ -82,10 +81,27 @@ const plugins = () => {
 
 module.exports = {
   mode: 'development',
+  cache: {
+    // По умолчанию файлы кэшируются в памяти в mode: development и не кэшируются вовсе,
+    // если mode: production. Для того чтобы Webpack кэшировал все не в оперативной памяти,
+    // а в постоянной
+    type: 'filesystem', // По умолчанию 'memory'
+    // Webpack будет кэшировать билд в node_modules/.cache/webpack и автоматом пропускать то,
+    // что не изменилось.
+    cacheDirectory: path.resolve(__dirname, '.temporary_cache'), // Устанавливаем диреторию для кэша.
+    // Для того чтобы отключить кэш вовсе достаточно просто добавить cache: false,
+    // интересным замечанием будет то, что cache: true — то же самое, что и cache: {type: 'memory'}
+  },
+  // Webpack может компилировать изменения каждый раз, как только мы перекомпилируем файлы.
+  // Это очень полезно при разработке. Для того чтобы Webpack "подсматривал" за нашими файлами =>
+  watchOptions: {
+    // исключите огромные директории, которые не изменяются во время разработки =>
+    ignored: /node_modules/,
+  },
   entry: './src/index.js', // входная точка - исходный файл
   output: {
     // With optimization, we should use [name] =>
-    filename: '[name].js', // название создаваемого файла, by default - main.js
+    filename: '[name].[chunkhash].js', // название создаваемого файла, by default - main.js
     path: path.resolve(__dirname, 'dist'), // путь к каталогу выходных файлов
   },
   optimization: optimization(),
@@ -101,6 +117,17 @@ module.exports = {
   devServer: {
     port: 4200,
     hot: isDev,
+    client: {
+      // Показывает ошибки при компиляции в самом браузере
+      overlay: {
+        // Ошибки
+        errors: true,
+        // Предупреждения
+        warnings: false,
+      },
+      // Показывает прогесс компиляции
+      progress: true,
+    },
   },
   devtool: isDev ? 'source-map' : false, // initial maps
   // Для загрузки файлов в webpack необходимы загрузчики, которые определяют правила
