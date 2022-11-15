@@ -2,7 +2,9 @@
   "name": "profile",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://SvetlanaPrus.github.io/s.prus-portfolio",
+  "repository": {
+    "url": "git+https://github.com/SvetlanaPrus/s.prus-portfolio.git"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@react-spring/core": "^9.5.5",
