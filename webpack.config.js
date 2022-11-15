@@ -116,6 +116,9 @@ module.exports = {
   // devServer определяют конфигурацию запускаемого веб-сервера
   devServer: {
     port: 4200,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     hot: isDev,
     client: {
       // Показывает ошибки при компиляции в самом браузере
