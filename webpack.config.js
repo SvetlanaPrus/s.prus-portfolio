@@ -67,8 +67,8 @@ const plugins = () => {
     //   ],
     // }),
     new MiniCssExtractPlugin({
+      linkType: 'text/css',
       filename: '[name].css',
-      // linkType: 'text/css',
     }),
     () => (isDev ? new ESLintPlugin() : null),
   ];
@@ -102,7 +102,6 @@ module.exports = {
   // entry: './src/index.js', // входная точка - исходный файл
   entry: {
     main: './src/index.js',
-    styles: './src/theme/main.scss',
   },
   output: {
     // With optimization, we should use [name] =>
