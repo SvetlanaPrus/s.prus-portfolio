@@ -1,4 +1,3 @@
-// import React, { StrictMode } from 'react';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './theme/main.scss'; // obs: NOT right extension, needs "scss" instead of "css"

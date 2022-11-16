@@ -68,6 +68,7 @@ const plugins = () => {
     // }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
+      // linkType: 'text/css',
     }),
     () => (isDev ? new ESLintPlugin() : null),
   ];
@@ -98,7 +99,11 @@ module.exports = {
     // исключите огромные директории, которые не изменяются во время разработки =>
     ignored: /node_modules/,
   },
-  entry: './src/index.js', // входная точка - исходный файл
+  // entry: './src/index.js', // входная точка - исходный файл
+  entry: {
+    main: './src/index.js',
+    styles: './src/theme/main.scss',
+  },
   output: {
     // With optimization, we should use [name] =>
     filename: '[name].[chunkhash].js', // название создаваемого файла, by default - main.js
