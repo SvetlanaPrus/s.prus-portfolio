@@ -1,4 +1,5 @@
-import React, { StrictMode } from 'react';
+// import React, { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './theme/main.scss'; // obs: NOT right extension, needs "scss" instead of "css"
 import { HashRouter } from 'react-router-dom';
@@ -8,9 +9,9 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <StrictMode>
+  <React.StrictMode>
     <HashRouter>
       <App />
     </HashRouter>
-  </StrictMode>,
+  </React.StrictMode>,
 );
