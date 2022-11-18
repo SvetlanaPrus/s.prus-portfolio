@@ -13,7 +13,17 @@ const isProd = !isDev;
 
 const optimization = () => {
   const config = {
-    splitChunks: { chunks: 'all' },
+    moduleIds: 'deterministic',
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom|@emailjs|react-devtools-core)[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
+    },
   };
 
   if (isProd) {
@@ -31,7 +41,9 @@ const cssLoaders = (extra) => {
     // because it injects CSS into the DOM using multiple and works faster.
     // For production builds it's recommended to extract CSS from your bundle => see MiniCss..
     // OBS! Do not use style-loader & mini-css-extract-plugin together.
-    isDev ? 'style-loader' : MiniCssExtractPlugin.loader, // Creates `style` nodes from JS strings
+    // Creates `style` nodes from JS strings =>
+    // isDev ? 'style-loader' : MiniCssExtractPlugin.loader, // - ver.1
+    MiniCssExtractPlugin.loader,
     'css-loader', // Translates CSS into CommonJS
     {
       loader: 'resolve-url-loader',
@@ -52,6 +64,7 @@ const plugins = () => {
   const base = [
     new HTMLWebpackPlugin({
       template: './docs/index.html',
+      title: 'Caching',
       minify: {
         collapseWhitespace: isProd ? true : null,
       },
@@ -68,7 +81,7 @@ const plugins = () => {
     // }),
     new MiniCssExtractPlugin({
       linkType: 'text/css',
-      filename: '[name].css',
+      filename: '[name].[chunkhash].css',
     }),
     () => (isDev ? new ESLintPlugin() : null),
   ];
@@ -136,7 +149,8 @@ module.exports = {
       progress: true,
     },
   },
-  devtool: isDev ? 'source-map' : false, // initial maps
+  // devtool: isDev ? 'source-map' : false, // initial maps - ver.1
+  devtool: isDev ? 'eval-cheap-module-source-map' : 'nosources-source-map', // - ver.2
   // Для загрузки файлов в webpack необходимы загрузчики, которые определяют правила
   // загрузки и обработки файлов.
   module: {
@@ -183,9 +197,17 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg|webp)$/i,
-        type: 'asset/resource',
+        // type: 'asset/resource', // - ver.1
+        type: 'asset',
+        parser: {
+          // Conditions for converting to base64
+          dataUrlCondition: {
+            maxSize: 25 * 1024,
+          },
+        },
         generator: {
-          filename: 'images/[name].[ext]',
+          // filename: 'images/[name].[ext]', // - ver.1
+          filename: 'images/[contenthash][ext][query]',
         },
       },
       {
