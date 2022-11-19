@@ -42,7 +42,6 @@ const cssLoaders = (extra) => {
     // For production builds it's recommended to extract CSS from your bundle => see MiniCss..
     // OBS! Do not use style-loader & mini-css-extract-plugin together.
     // Creates `style` nodes from JS strings =>
-    // isDev ? 'style-loader' : MiniCssExtractPlugin.loader, // - ver.1
     MiniCssExtractPlugin.loader,
     'css-loader', // Translates CSS into CommonJS
     {
@@ -112,7 +111,6 @@ module.exports = {
     // исключите огромные директории, которые не изменяются во время разработки =>
     ignored: /node_modules/,
   },
-  // entry: './src/index.js', // входная точка - исходный файл
   entry: {
     main: './src/index.js',
   },
@@ -130,7 +128,6 @@ module.exports = {
     //   '@images': resolvePath('src/theme/images'),
     // },
   },
-  // devServer определяют конфигурацию запускаемого веб-сервера
   devServer: {
     port: 4200,
     static: {
@@ -140,27 +137,23 @@ module.exports = {
     client: {
       // Показывает ошибки при компиляции в самом браузере
       overlay: {
-        // Ошибки
         errors: true,
-        // Предупреждения
         warnings: false,
       },
-      // Показывает прогесс компиляции
       progress: true,
     },
   },
-  // devtool: isDev ? 'source-map' : false, // initial maps - ver.1
-  devtool: isDev ? 'eval-cheap-module-source-map' : 'nosources-source-map', // - ver.2
+  devtool: isDev ? 'eval-cheap-module-source-map' : 'nosources-source-map',
   // Для загрузки файлов в webpack необходимы загрузчики, которые определяют правила
   // загрузки и обработки файлов.
   module: {
     rules: [
       {
-        test: /\.jsx?$/, // загрузчик для jsx
-        exclude: /node_modules/, // исключаем из обработки папку node_modules
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader', // для компиляции из jsx в js необходим компилятор babel
         options: {
-          presets: ['@babel/preset-react'], // используемые плагины
+          presets: ['@babel/preset-react'],
         },
       },
       {
@@ -188,7 +181,7 @@ module.exports = {
         test: /\.s[ac]ss$/,
         use: cssLoaders(
           {
-            loader: 'sass-loader', // Compiles Sass to CSS
+            loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
@@ -197,7 +190,6 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg|webp)$/i,
-        // type: 'asset/resource', // - ver.1
         type: 'asset',
         parser: {
           // Conditions for converting to base64
@@ -206,7 +198,6 @@ module.exports = {
           },
         },
         generator: {
-          // filename: 'images/[name].[ext]', // - ver.1
           filename: 'images/[contenthash][ext][query]',
         },
       },
