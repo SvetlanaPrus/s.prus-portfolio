@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import { useSection } from '../helpers/context';
 
 (function () { emailjs.init('4fIqsUhl3sTPHOf45'); }());
@@ -9,20 +11,46 @@ export default function Contact() {
   const [_, contactSection] = useSection();
   const form = useRef();
 
+  function showMessage(status) {
+    const obj = {
+      success: [toast.success, 'Your message is sent'],
+      error: [toast.error, 'Something went wrong'],
+    };
+
+    obj[status][0](obj[status][1], {
+      position: toast.POSITION.TOP_RIGHT + window.scrollY,
+      limit: 1,
+      closeButton: false,
+      hideProgressBar: true,
+      closeOnClick: true,
+      rtl: false,
+      pauseOnFocusLoss: false,
+      draggable: false,
+      pauseOnHover: true,
+      theme: 'colored',
+    });
+    return toast;
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_qwa8hxd', 'template_t1fzo0u', form.current, '4fIqsUhl3sTPHOf45')
       .then((result) => {
-        form.current.value = '';
         console.log(result.text);
+        showMessage('success');
+        toast.dismiss();
       }, (error) => {
         console.log(error.text);
+        showMessage('error');
+        toast.dismiss();
       });
+    form.current[0].value = '';
   };
 
   return (
     <section className="contact" ref={contactSection}>
+      <ToastContainer />
       <div className="contact-container">
         <div className="contact-form">
           <p>CONTACT</p>
@@ -69,6 +97,7 @@ export default function Contact() {
         </div>
         <div className="image">
           <div className="container__image">
+            {/* remember: next div for background, orange => */}
             <div />
             <iframe
               title="Oslo"
@@ -76,7 +105,6 @@ export default function Contact() {
               width="600"
               height="450"
               style={{ border: 0 }}
-              // allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
