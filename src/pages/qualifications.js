@@ -17,9 +17,10 @@ export default function Qualification() {
             </div>
             <h4>Competence:</h4>
             <ul>
-              <li>HTML, CSS, SCSS, Figma</li>
-              <li>jQuery, Javascript, React</li>
-              <li>Bootstrap, Material UI, Ant Design</li>
+              <li>HTML, CSS, SCSS, SASS, Figma</li>
+              <li>Javascript, jQuery, React</li>
+              <li>Bootstrap, Material UI</li>
+              <li>Webpack, GitHub, GitLab</li>
             </ul>
             <p><strong>Some experience:</strong></p>
             <p>Typescript, Tailwind CSS, API, Redux, MobX ...</p>
@@ -29,6 +30,9 @@ export default function Qualification() {
               <img src={IconEndorsement} alt="icon" />
             </div>
             <h4>Certifications:</h4>
+            <ul>
+              <li>Certified Entry-Level JavaScript Programmer</li>
+            </ul>
             <p><strong>Microsoft Azure Certified:</strong></p>
             <ul>
               <li>Fundamentals</li>
@@ -59,7 +63,7 @@ export default function Qualification() {
             </div>
             <h4>Personal traits:</h4>
             <p>
-              I am passionate about frontend development, love coding, and not afraid to jump
+              I am passionate about frontend development, love coding and not afraid to jump
               into the unknown. A good team-player, motivated, driven and open-minded.
             </p>
           </div>
