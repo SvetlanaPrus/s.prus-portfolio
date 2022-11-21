@@ -500,29 +500,23 @@
 
 .home {
   padding: 365px 0 65px 0;
-  height: 550px;
   background: url("../images/home.jpg") no-repeat fixed center center;
   background-size: cover;
   display: flex;
   align-items: center;
-}
-.home .home-flex {
-  height: 306px;
 }
 @media (max-width: 1199.8px) {
   .home .home-flex {
     margin: 0 20px 0 20px;
   }
 }
-@media (max-width: 991.8px) {
+@media (max-width: 1023.8px) {
   .home .home-flex {
     flex-wrap: wrap;
-    margin: 0 20px 0 20px;
   }
 }
 .home .home-flex .block-txt {
   width: 470px;
-  margin-bottom: 60px;
 }
 .home .home-flex .block-txt p {
   margin: 0 0 28px 0;
@@ -547,11 +541,6 @@
   font-size: 72px;
   line-height: 80px;
   color: rgb(216, 216, 216);
-}
-@media (max-width: 991.8px) {
-  .home .home-flex .block-txt h1 {
-    margin: 0 0 30px 0;
-  }
 }
 .home .home-flex .block-txt .btn-arrow {
   text-decoration: none;
@@ -581,7 +570,17 @@
   display: flex;
   align-items: flex-end;
 }
-@media (max-width: 575.8px) {
+@media (max-width: 1023.8px) {
+  .home .home-flex .banner-flex {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 991.8px) {
+  .home .home-flex .banner-flex {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767.8px) {
   .home .home-flex .banner-flex {
     transform: scale(0.9);
     transform-origin: left;
@@ -638,10 +637,8 @@
 }
 
 .qualification {
-  width: 100%;
-  min-height: 600px;
   background: rgb(255, 245, 228);
-  padding: 70px 0 70px 0;
+  padding: 70px 0;
 }
 .qualification p:first-child {
   font-family: "Oswald", sans-serif;
@@ -658,6 +655,13 @@
   flex-grow: 0;
   margin: 0 0 20px 0;
 }
+@media (max-width: 767.8px) {
+  .qualification p:first-child {
+    display: flex;
+    transform-origin: left;
+    margin-left: 30px;
+  }
+}
 .qualification h2 {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -668,15 +672,82 @@
   color: rgb(51, 51, 51);
   margin: 0 0 60px 0;
 }
-.qualification .block {
-  width: 270px;
-  height: 70px;
+@media (max-width: 767.8px) {
+  .qualification h2 {
+    display: flex;
+    transform-origin: left;
+    margin-left: 30px;
+  }
 }
-.qualification .block .wrapper-block__img {
+@media (max-width: 1199.8px) {
+  .qualification .list {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 1023.8px) {
+  .qualification .list {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 991.8px) {
+  .qualification .list {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 767.8px) {
+  .qualification .list {
+    margin: 0 20px;
+  }
+}
+.qualification .list .list__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -30px -30px;
+}
+@media (max-width: 1199.8px) {
+  .qualification .list .list__flex {
+    justify-content: center;
+  }
+}
+@media (max-width: 1023.8px) {
+  .qualification .list .list__flex {
+    justify-content: center;
+  }
+}
+.qualification .list .list__flex .content {
+  width: 20%;
+  margin: 0 30px 30px;
+}
+@media (max-width: 1199.8px) {
+  .qualification .list .list__flex .content {
+    width: 30%;
+    flex: 0 1 30%;
+  }
+}
+@media (max-width: 1023.8px) {
+  .qualification .list .list__flex .content {
+    width: 30%;
+    flex: 0 1 30%;
+  }
+}
+@media (max-width: 991.8px) {
+  .qualification .list .list__flex .content {
+    width: 50%;
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 767.8px) {
+  .qualification .list .list__flex .content {
+    width: 100%;
+    flex: 0 1 100%;
+  }
+}
+.qualification .list .list__flex .content .wrapper-block__img {
   height: 70px;
   margin-bottom: 32px;
 }
-.qualification .block h4 {
+.qualification .list .list__flex .content h4 {
   margin: 0 0 18px 0;
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -685,7 +756,7 @@
   line-height: 32px;
   color: rgb(51, 51, 51);
 }
-.qualification .block p {
+.qualification .list .list__flex .content p {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -694,11 +765,14 @@
   line-height: 32px;
   color: rgba(51, 51, 51, 0.7);
 }
-.qualification .block p ul {
+.qualification .list .list__flex .content p ul {
   margin: 0;
   padding: 0;
 }
-.qualification .block ul {
+.qualification .list .list__flex .content p:nth-child(3) {
+  width: 257px;
+}
+.qualification .list .list__flex .content ul {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
