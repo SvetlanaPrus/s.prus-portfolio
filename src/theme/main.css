@@ -500,7 +500,7 @@
 
 .home {
   padding: 365px 0 65px 0;
-  height: 600px;
+  height: 550px;
   background: url("../images/home.jpg") no-repeat fixed center center;
   background-size: cover;
   display: flex;
@@ -509,8 +509,20 @@
 .home .home-flex {
   height: 306px;
 }
+@media (max-width: 1199.8px) {
+  .home .home-flex {
+    margin: 0 20px 0 20px;
+  }
+}
+@media (max-width: 991.8px) {
+  .home .home-flex {
+    flex-wrap: wrap;
+    margin: 0 20px 0 20px;
+  }
+}
 .home .home-flex .block-txt {
   width: 470px;
+  margin-bottom: 60px;
 }
 .home .home-flex .block-txt p {
   margin: 0 0 28px 0;
@@ -535,6 +547,11 @@
   font-size: 72px;
   line-height: 80px;
   color: rgb(216, 216, 216);
+}
+@media (max-width: 991.8px) {
+  .home .home-flex .block-txt h1 {
+    margin: 0 0 30px 0;
+  }
 }
 .home .home-flex .block-txt .btn-arrow {
   text-decoration: none;
@@ -563,6 +580,12 @@
 .home .home-flex .banner-flex {
   display: flex;
   align-items: flex-end;
+}
+@media (max-width: 575.8px) {
+  .home .home-flex .banner-flex {
+    transform: scale(0.9);
+    transform-origin: left;
+  }
 }
 .home .home-flex .banner-flex .block-banner {
   width: 470px;
