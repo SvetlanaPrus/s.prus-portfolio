@@ -1,11 +1,10 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
+@import "../vars/_breakpoints.scss";
 
 .qualification {
-  width: 100%;
-  min-height: 600px;
   background: $yellow-light;
-  padding: 70px 0 70px 0;
+  padding: 70px 0;
 
   & p:first-child {
     font-family: $font-Oswald;
@@ -21,6 +20,12 @@
     order: 0;
     flex-grow: 0;
     margin: 0 0 20px 0;
+
+    @include sm-d {
+      display: flex;
+      transform-origin: left;
+      margin-left: 30px;
+    }
   }
 
   & h2 {
@@ -32,50 +37,109 @@
     text-align: center;
     color: $black;
     margin: 0 0 60px 0;
-  }
 
-  .block {
-    width: 270px;
-    height: 70px;
-
-    & .wrapper-block__img {
-      height: 70px;
-      margin-bottom: 32px;
-    }
-
-    & h4 {
-      margin: 0 0 18px 0;
-      font-family: $font-Oswald;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 32px;
-      color: $black;
-    }
-
-    & p {
-      margin: 0;
-      font-family: $font-Montserrat;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 32px;
-      color: $grey-dark;
-
-      & ul {
-        margin: 0;
-        padding: 0;
-      }
-    }
-
-    & ul {
-      margin: 0;
-      font-family: $font-Montserrat;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 32px;
-      color: $grey-dark;
+    @include sm-d {
+      display: flex;
+      transform-origin: left;
+      margin-left: 30px;
     }
   }
+
+ & .list {
+   @include xl-d {
+     margin: 0 20px;
+   }
+   @include lg-d {
+     margin: 0 20px;
+   }
+   @include md-d {
+     margin: 0 20px;
+   }
+   @include sm-d {
+     margin: 0 20px;
+   }
+
+   & .list__flex {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content:space-between;
+     margin: 0 -30px -30px; // must be as in .catalog__col, with "-"
+
+     @include xl-d {
+       justify-content:center;
+     }
+     @include lg-d {
+       justify-content:center;
+     }
+
+     & .content{
+       width: 20%;
+       margin: 0 30px 30px;
+
+       @include xl-d {
+         width: 30%;
+         flex: 0 1 30%;
+       }
+
+       @include lg-d {
+         width: 30%;
+         flex: 0 1 30%;
+       }
+
+       @include md-d {
+         width: 50%;
+         flex: 0 1 50%;
+       }
+
+       @include sm-d {
+         width: 100%;
+         flex: 0 1 100%;
+       }
+
+       & .wrapper-block__img {
+         height: 70px;
+         margin-bottom: 32px;
+       }
+
+       & h4 {
+         margin: 0 0 18px 0;
+         font-family: $font-Oswald;
+         font-style: normal;
+         font-weight: 700;
+         font-size: 24px;
+         line-height: 32px;
+         color: $black;
+       }
+
+       & p {
+         margin: 0;
+         font-family: $font-Montserrat;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 32px;
+         color: $grey-dark;
+
+         & ul {
+           margin: 0;
+           padding: 0;
+         }
+       }
+
+       & p:nth-child(3){
+         width: 257px;
+       }
+
+       & ul {
+         margin: 0;
+         font-family: $font-Montserrat;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 32px;
+         color: $grey-dark;
+       }
+     }
+   }
+ }
 }
