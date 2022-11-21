@@ -1,9 +1,10 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
+@import "../vars/_breakpoints";
 
 .home {
   padding: 365px 0 65px 0;
-  height: 600px;
+  height: 550px;
   // look with respect to: ".." = "src\theme" =>
   background: url('../images/home.jpg') no-repeat fixed center center;
   background-size: cover;
@@ -14,8 +15,18 @@
     @extend .flex-container;
     height: 306px;
 
+    @include lg-d {
+      margin: 0 20px 0 20px;
+    }
+
+    @include md-d {
+      flex-wrap: wrap;
+      margin: 0 20px 0 20px;
+    }
+
     & .block-txt {
       width: calc(5 * 70px + 4 * 30px);
+      margin-bottom: 60px;
 
       & p {
         margin: 0 0 28px 0;
@@ -41,6 +52,10 @@
         font-size: 72px;
         line-height: 80px;
         color: $white-light;
+
+        @include md-d {
+          margin: 0 0 30px 0;
+        }
       }
 
       & .btn-arrow {
@@ -74,6 +89,12 @@
     & .banner-flex {
       display: flex;
       align-items: flex-end;
+
+      @include xs-d {
+        transform: scale(0.9);
+        transform-origin: left;
+      }
+
 
       & .block-banner {
         width: calc(5 * 70px + 4 * 30px);
