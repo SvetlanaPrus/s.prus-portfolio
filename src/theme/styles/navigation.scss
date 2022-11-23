@@ -40,6 +40,12 @@
       }
     }
 
+    & button:hover, button:focus {
+      cursor: pointer;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px 2px $white-light;
+    }
+
      & button {
         width: 106px;
         height: 48px;
@@ -59,6 +65,7 @@
         text-decoration: none;
         cursor: pointer;
         box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
+       transition: transform .3s ease;
      }
   }
 }
