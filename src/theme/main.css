@@ -301,9 +301,13 @@
   line-height: 30px;
   text-align: center;
   color: rgb(255, 255, 255);
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 .contact .contact-container .contact-form .form__submit:hover {
   cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 .contact .contact-container .image .container__image {
   width: 626px;
@@ -477,6 +481,11 @@
 .navigation .media-block .circle img {
   margin: auto;
 }
+.navigation .media-block button:hover, .navigation .media-block button:focus {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px 2px rgb(216, 216, 216);
+}
 .navigation .media-block button {
   width: 106px;
   height: 48px;
@@ -496,6 +505,7 @@
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .home {
@@ -548,14 +558,21 @@
   display: flex;
   align-items: center;
 }
+.home .home-flex .block-txt .btn-arrow .circle:hover,
+.home .home-flex .block-txt .btn-arrow .circle:focus {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px 2px rgb(85, 85, 85);
+}
 .home .home-flex .block-txt .btn-arrow .circle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  border: none;
   background-color: rgb(216, 216, 216);
   display: flex;
-  cursor: pointer;
   margin-right: 16px;
+  transition: transform 0.3s ease;
 }
 .home .home-flex .block-txt .btn-arrow .circle img {
   margin: auto;
@@ -844,6 +861,7 @@
   color: rgba(51, 51, 51, 0.5);
   text-align: justify;
   white-space: pre-line;
+  cursor: pointer;
 }
 @media (max-width: 1199.8px) {
   .history .story .story-flex .right #text {
@@ -861,14 +879,21 @@
   display: flex;
   align-items: center;
 }
+.history .story .story-flex .right .btn-arrow .circle:hover,
+.history .story .story-flex .right .btn-arrow .circle:focus {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
 .history .story .story-flex .right .btn-arrow .circle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
   background-color: rgba(245, 166, 35, 0.4);
   display: flex;
-  cursor: pointer;
   margin-right: 16px;
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 .history .story .story-flex .right .btn-arrow .circle img {
   margin: auto;
@@ -931,6 +956,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
+}
+#btnTop .circle:hover,
+#btnTop .circle:focus {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 
 body {

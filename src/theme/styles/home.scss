@@ -57,14 +57,22 @@
         display: flex;
         align-items: center;
 
+        .circle:hover,
+        .circle:focus {
+          cursor: pointer;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px 2px $grey-light;
+        }
+
         .circle {
           width: 48px;
           height: 48px;
           border-radius: 50%;
+          border: none;
           background-color: $white-light;
           display: flex;
-          cursor: pointer;
           margin-right: 16px;
+          transition: transform .3s ease;
 
           img {
             margin: auto;
