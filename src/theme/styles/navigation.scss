@@ -1,9 +1,10 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
+@import "../vars/_breakpoints.scss";
 
 .navigation {
   width: 100%;
-  padding: 18px 0 18px 0;
+  padding: 18px 0;
   top: 0;
   background: linear-gradient(to right,
           rgba(51, 51, 51, 0.8),
@@ -12,60 +13,82 @@
           rgba(255, 245, 228, 0.5));
   position: fixed;
   z-index: 100;
+  display: flex;
 
-  & p {
-    margin: 0;
-    font-family: $font-Oswald;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: $white;
-  }
-  & .media-block {
-    display: inline-flex;
+  & .bar {
+    & .bar-flex {
+      @extend .flex-container;
 
-    .circle {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: $grey-mid;
-      display: flex;
-      cursor: pointer;
-      margin-right: 16px;
-      box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
-
-      img {
-        margin: auto;
+      @include xl-d {
+        margin: 0 20px;
       }
-    }
 
-    & button:hover, button:focus {
-      cursor: pointer;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px 2px $white-light;
-    }
-
-     & button {
-        width: 106px;
-        height: 48px;
-        background: $grey-mid;
-        border-radius: 3px;
-        border: none;
-        margin-left: 60px;
+      & p {
+        margin: 0;
         font-family: $font-Oswald;
         font-style: normal;
         font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 40px;
+        line-height: 48px;
         color: $white;
-        text-decoration: none;
-        cursor: pointer;
-        box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
-       transition: transform .3s ease;
-     }
+
+        @include xs-d {
+          transform: scale(0.9);
+        }
+      }
+
+      & .media-block {
+        display: inline-flex;
+
+        .circle {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background-color: $grey-mid;
+          display: flex;
+          cursor: pointer;
+          margin-right: 16px;
+          box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
+
+          @include sm-d {
+            display: none;
+          }
+
+          img {
+            margin: auto;
+          }
+        }
+
+        & button:hover, button:focus {
+          cursor: pointer;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px 2px $white-light;
+        }
+
+        & button {
+          width: 106px;
+          height: 48px;
+          background: $grey-mid;
+          border-radius: 3px;
+          border: none;
+          margin-left: 60px;
+          font-family: $font-Oswald;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $white;
+          text-decoration: none;
+          cursor: pointer;
+          box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
+          transition: transform .3s ease;
+        }
+      }
+    }
   }
+
+
 }
