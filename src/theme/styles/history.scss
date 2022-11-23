@@ -1,83 +1,118 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
+@import "../vars/_breakpoints.scss";
 
 .history {
-  padding: 120px 0 120px 0;
+  margin: 70px 0;
   background: $white;
 
-  & .left {
-    width: calc(6 * 70px + 5 * 30px);
-    height: 624px;
-    background: linear-gradient(135deg, #FFEBC9 0%, #F5A623 100%);
-    position: relative;
-
-      & img {
-        padding: 48px 56px 48px 56px;
-    }
+  @include xl-d {
+    margin: 70px 0 110px;
   }
 
-  & .right {
-    width: calc(5 * 70px + 4 * 30px);
-    font-style: normal;
+  & .story {
 
-    & p:first-child {
-      margin: 0 0 16px 0;
-      background: $yellow-light;
-      font-family: $font-Oswald;
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 32px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: $black;
-      display: inline-flex;
-      padding: 0 13px 0 14px;
-      border-radius: 3px;
+    @include xl-d {
+      margin: 0 20px;
     }
 
-    & h2 {
-      margin: 0 0 80px 0;
-      font-family: $font-Oswald;
-      font-weight: 700;
-      font-size: 56px;
-      line-height: 64px;
-      color: $black;
-    }
+    & .story-flex{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -30px 0; // must be as .right, with "-" (see below)
 
-    & p {
-      margin: 0 0 169px 0;
-      font-family: $font-Montserrat;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 32px;
-      color: $grey-mid;
-    }
+      @include xl-d {
+        justify-content:center;
+      }
+      @include sm-d {
+        justify-content:left;
+      }
 
-    & .btn-arrow {
-        text-decoration: none;
-        font-family: $font-Montserrat;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
+      & .left {
+        width: calc(6 * 70px + 5 * 30px);
+        background: linear-gradient(135deg, #FFEBC9 0%, #F5A623 100%);
+        position: relative;
+
+        @include xl-d {
+          display: none;
+        }
+
+        & img {
+          padding: 48px 56px 48px 56px;
+        }
+      }
+
+      .right>p { // перенесла, чтоб не путать стили тега с другим тегом "p" в блоке .right
+        margin: 0 0 16px 0;
+        background: $yellow-light;
+        font-family: $font-Oswald;
+        font-weight: 300;
+        font-size: 18px;
         line-height: 32px;
-        color: $grey-mid;
-        display: flex;
-        align-items: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $black;
+        display: inline-flex;
+        padding: 0 13px 0 14px;
+        border-radius: 3px;
+      }
 
-        .circle {
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-          background-color: $yellow-mid;
+      & .right {
+        width: calc(5 * 70px + 4 * 30px);
+        font-style: normal;
+        margin: 0 30px 0;  // * see above
+
+        & h2 {
+          margin: 0 0 80px 0;
+          font-family: $font-Oswald;
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 64px;
+          color: $black;
+        }
+
+        & #text {
+          margin: 0 0 160px;
+          font-family: $font-Montserrat;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+          color: $grey-mid;
+          text-align:justify;
+          white-space: pre-line; // перенести текст (see json => \n)
+
+          @include xl-d {
+            margin: 0 0 80px;
+          }
+        }
+
+        & .btn-arrow {
+          text-decoration: none;
+          font-family: $font-Montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 32px;
+          color: $grey-mid;
           display: flex;
-          cursor: pointer;
-          margin-right: 16px;
+          align-items: center;
 
-          img {
-            margin: auto;
-            object-fit: cover;
+          .circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: $yellow-mid;
+            display: flex;
+            cursor: pointer;
+            margin-right: 16px;
+
+            img {
+              margin: auto;
+              object-fit: cover;
+            }
           }
         }
       }
+    }
   }
 }

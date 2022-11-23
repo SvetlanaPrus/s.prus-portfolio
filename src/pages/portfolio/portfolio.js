@@ -16,8 +16,8 @@ export default function Portfolio() {
           <p>PORTFOLIO</p>
           <h2>My first projects...</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa molestie
-            faucibus consectetur ac, sit orci massa.
+            {/* «Love what you do. Do what you love» */}
+            “The journey of a thousand miles begins with one step.” — Lao Tzu
           </p>
         </div>
         <Carousel

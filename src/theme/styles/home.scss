@@ -14,10 +14,7 @@
     @extend .flex-container;
 
     @include xl-d {
-      margin: 0 20px 0 20px;
-    }
-    @include lg-d {
-      flex-wrap: wrap;
+      margin: 0 20px;
     }
 
     & .block-txt {
@@ -82,14 +79,7 @@
       align-items: flex-end;
 
       @include lg-d {
-        margin-top: 30px;
-      }
-      @include md-d {
-        margin-top: 30px;
-      }
-      @include sm-d {
-        transform: scale(0.9);
-        transform-origin: left;
+        display: none;
       }
 
       & .block-banner {

@@ -12,7 +12,7 @@ export default function Home() {
       <div className="container">
         <div className="home-flex">
           <div className="block-txt">
-            <p>1.5+ years experience</p>
+            <p>2+ years experience</p>
             <h1>Build dream</h1>
             <div className="btn-arrow">
               <button className="circle" onClick={() => scrollToSection(portfolioSection)} type="button">
