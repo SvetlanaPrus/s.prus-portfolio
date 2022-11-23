@@ -11,21 +11,23 @@ export default function NavBar() {
   return (
     <section className="navigation">
       <div className="container">
-        <div className="flex-container">
-          <p>SVETLANA PRUS</p>
-          <div className="media-block">
-            <a className="facebook" href="#top">
-              <div className="circle"><img src={Facebook} alt="facebook" /></div>
-            </a>
-            <a className="twitter" href="#top">
-              <div className="circle"><img src={Twitter} alt="twitter" /></div>
-            </a>
-            <a className="instagram" href="#top">
-              <div className="circle"><img src={Instagram} alt="instagram" /></div>
-            </a>
-            <button onClick={() => scrollToSection(contactSection)} type="button">
-              Contact
-            </button>
+        <div className="bar">
+          <div className="bar-flex">
+            <p>SVETLANA PRUS</p>
+            <div className="media-block">
+              <a className="facebook" href="#top">
+                <div className="circle"><img src={Facebook} alt="facebook" /></div>
+              </a>
+              <a className="twitter" href="#top">
+                <div className="circle"><img src={Twitter} alt="twitter" /></div>
+              </a>
+              <a className="instagram" href="#top">
+                <div className="circle"><img src={Instagram} alt="instagram" /></div>
+              </a>
+              <button onClick={() => scrollToSection(contactSection)} type="button">
+                Contact
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -450,13 +450,19 @@
 
 .navigation {
   width: 100%;
-  padding: 18px 0 18px 0;
+  padding: 18px 0;
   top: 0;
   background: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6), rgba(255, 245, 228, 0.7), rgba(255, 245, 228, 0.5));
   position: fixed;
   z-index: 100;
+  display: flex;
 }
-.navigation p {
+@media (max-width: 1199.8px) {
+  .navigation .bar .bar-flex {
+    margin: 0 20px;
+  }
+}
+.navigation .bar .bar-flex p {
   margin: 0;
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -465,10 +471,15 @@
   line-height: 48px;
   color: rgb(255, 255, 255);
 }
-.navigation .media-block {
+@media (max-width: 575.8px) {
+  .navigation .bar .bar-flex p {
+    transform: scale(0.9);
+  }
+}
+.navigation .bar .bar-flex .media-block {
   display: inline-flex;
 }
-.navigation .media-block .circle {
+.navigation .bar .bar-flex .media-block .circle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -478,15 +489,20 @@
   margin-right: 16px;
   box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
 }
-.navigation .media-block .circle img {
+@media (max-width: 767.8px) {
+  .navigation .bar .bar-flex .media-block .circle {
+    display: none;
+  }
+}
+.navigation .bar .bar-flex .media-block .circle img {
   margin: auto;
 }
-.navigation .media-block button:hover, .navigation .media-block button:focus {
+.navigation .bar .bar-flex .media-block button:hover, .navigation .bar .bar-flex .media-block button:focus {
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: 0 10px 20px 2px rgb(216, 216, 216);
 }
-.navigation .media-block button {
+.navigation .bar .bar-flex .media-block button {
   width: 106px;
   height: 48px;
   background: rgba(51, 51, 51, 0.5);
@@ -976,7 +992,7 @@ body {
   margin: 0 auto;
 }
 
-.flex-container, .feedbacks-container, .contact .contact-container, .home .home-flex {
+.flex-container, .feedbacks-container, .contact .contact-container, .navigation .bar .bar-flex, .home .home-flex {
   display: flex;
   justify-content: space-between;
 }
