@@ -1,123 +1,139 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
+@import "../vars/_breakpoints.scss";
 
 .footer {
   background: $black;
   padding: 78px 0 37px 0;
+  display: flex;
 
-  & .foot-left {
-    width: calc(4 * 70px + 3 * 30px);
-    color: $white;
-    display: inline-block;
-
-    & a:first-child {
-      text-decoration: none;
+  & .info {
+    @include xl-d {
+      margin: 0 20px;
     }
 
-    & a h2 {
-      margin: 0 0 34px 0;
-      font-family: $font-Oswald;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 48px;
-      color: $white;
-    }
-    & .phone-block {
-      margin: 0 0 16px 0;
-      font-family: $font-Oswald;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 32px;
-      color: $white;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
+    & .info-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between;
 
-      & .circle {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: #555555;
-        display: flex;
-        cursor: pointer;
-        margin-right: 16px;
+      & .foot-left {
+        width: calc(4 * 70px + 3 * 30px);
+        color: $white;
+        display: inline-block;
 
-        img {
-          margin: auto;
+        & a:first-child {
+          text-decoration: none;
+        }
+
+        & a h2 {
+          margin: 0 0 34px 0;
+          font-family: $font-Oswald;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 48px;
+          color: $white;
+        }
+        & .phone-block {
+          margin: 0 0 16px 0;
+          font-family: $font-Oswald;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          color: $white;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+
+          & .circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #555555;
+            display: flex;
+            cursor: pointer;
+            margin-right: 16px;
+
+            img {
+              margin: auto;
+            }
+          }
+        }
+        & .mail-block {
+          margin: 0 0 64px 0;
+          font-family: $font-Montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+          color: $white;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+
+          & .circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #555555;
+            display: flex;
+            cursor: pointer;
+            margin-right: 16px;
+
+            & img {
+              margin: auto;
+            }
+          }
         }
       }
-    }
-    & .mail-block {
-      margin: 0 0 64px 0;
-      font-family: $font-Montserrat;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 32px;
-      color: $white;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
 
-      & .circle {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: #555555;
-        display: flex;
-        cursor: pointer;
-        margin-right: 16px;
+      & .foot-right {
+        width: calc(4 * 70px + 3 * 30px);
+        height: auto;
+        margin-bottom: 64px;
 
-        & img {
-          margin: auto;
+        & p {
+          font-family: $font-Montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 32px;
+          color: $white;
+          margin: 0 0 39px 0;
         }
-      }
-    }
-  }
+        & .media-block {
+          display: inline-flex;
 
-  & .foot-right {
-    width: calc(4 * 70px + 3 * 30px);
-    height: auto;
-    display: inline-block;
+          .circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: $grey-light;
+            display: flex;
+            cursor: pointer;
+            margin-right: 16px;
 
-    & p {
-      font-family: $font-Montserrat;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 32px;
-      color: $white;
-      margin: 0 0 39px 0;
-    }
-    & .media-block {
-      display: inline-flex;
-
-      .circle {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: $grey-light;
-        display: flex;
-        cursor: pointer;
-        margin-right: 16px;
-
-        img {
-          margin: auto;
+            img {
+              margin: auto;
+            }
+          }
         }
       }
     }
   }
 
   & .footLine {
-    width: 100%;
     height: 1px;
     color: $white-dark;
     alignment: center;
     mix-blend-mode: normal;
     opacity: 0.1;
-    margin: 0 0 42px 0;
+
+    @include xl-d {
+      margin: 0 20px;
+    }
   }
 
   & .copyright {
@@ -127,7 +143,11 @@
     font-size: 16px;
     line-height: 32px;
     color: $white-dark;
-    margin: 0;
+    margin: 16px 0 0 0;
+
+    @include xl-d {
+      margin: 16px 20px 0 20px;
+    }
   }
 }
 
