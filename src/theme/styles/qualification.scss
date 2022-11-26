@@ -39,7 +39,8 @@
     margin: 0 0 60px 0;
 
     @include sm-d {
-      display: flex;
+      display: inline-flex;
+      flex-wrap: wrap;
       transform-origin: left;
       margin-left: 30px;
     }
@@ -47,15 +48,6 @@
 
  & .list {
    @include xl-d {
-     margin: 0 20px;
-   }
-   @include lg-d {
-     margin: 0 20px;
-   }
-   @include md-d {
-     margin: 0 20px;
-   }
-   @include sm-d {
      margin: 0 20px;
    }
 
@@ -77,11 +69,6 @@
        margin: 0 30px 30px;  // * see above
 
        @include xl-d {
-         width: 30%;
-         flex: 0 1 30%;
-       }
-
-       @include lg-d {
          width: 30%;
          flex: 0 1 30%;
        }

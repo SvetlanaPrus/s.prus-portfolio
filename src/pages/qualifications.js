@@ -65,7 +65,8 @@ export default function Qualification() {
               <h4>Personal traits:</h4>
               <p>
                 I am passionate about frontend development, love coding and not afraid to jump
-                into the unknown. A good team-player, motivated, driven and open-minded.
+                into the unknown. I am a solution-oriented problem solver and prepared to work hard
+                to reach the goals. A good motivated team-player.
               </p>
             </div>
           </div>

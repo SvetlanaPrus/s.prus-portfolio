@@ -334,16 +334,27 @@
 .footer {
   background: rgb(51, 51, 51);
   padding: 78px 0 37px 0;
+  display: flex;
 }
-.footer .foot-left {
+@media (max-width: 1199.8px) {
+  .footer .info {
+    margin: 0 20px;
+  }
+}
+.footer .info .info-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer .info .info-flex .foot-left {
   width: 370px;
   color: rgb(255, 255, 255);
   display: inline-block;
 }
-.footer .foot-left a:first-child {
+.footer .info .info-flex .foot-left a:first-child {
   text-decoration: none;
 }
-.footer .foot-left a h2 {
+.footer .info .info-flex .foot-left a h2 {
   margin: 0 0 34px 0;
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -352,7 +363,7 @@
   line-height: 48px;
   color: rgb(255, 255, 255);
 }
-.footer .foot-left .phone-block {
+.footer .info .info-flex .foot-left .phone-block {
   margin: 0 0 16px 0;
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -364,7 +375,7 @@
   display: inline-flex;
   align-items: center;
 }
-.footer .foot-left .phone-block .circle {
+.footer .info .info-flex .foot-left .phone-block .circle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -373,10 +384,10 @@
   cursor: pointer;
   margin-right: 16px;
 }
-.footer .foot-left .phone-block .circle img {
+.footer .info .info-flex .foot-left .phone-block .circle img {
   margin: auto;
 }
-.footer .foot-left .mail-block {
+.footer .info .info-flex .foot-left .mail-block {
   margin: 0 0 64px 0;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -388,7 +399,7 @@
   display: inline-flex;
   align-items: center;
 }
-.footer .foot-left .mail-block .circle {
+.footer .info .info-flex .foot-left .mail-block .circle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -397,15 +408,15 @@
   cursor: pointer;
   margin-right: 16px;
 }
-.footer .foot-left .mail-block .circle img {
+.footer .info .info-flex .foot-left .mail-block .circle img {
   margin: auto;
 }
-.footer .foot-right {
+.footer .info .info-flex .foot-right {
   width: 370px;
   height: auto;
-  display: inline-block;
+  margin-bottom: 64px;
 }
-.footer .foot-right p {
+.footer .info .info-flex .foot-right p {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -414,10 +425,10 @@
   color: rgb(255, 255, 255);
   margin: 0 0 39px 0;
 }
-.footer .foot-right .media-block {
+.footer .info .info-flex .foot-right .media-block {
   display: inline-flex;
 }
-.footer .foot-right .media-block .circle {
+.footer .info .info-flex .foot-right .media-block .circle {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -426,17 +437,20 @@
   cursor: pointer;
   margin-right: 16px;
 }
-.footer .foot-right .media-block .circle img {
+.footer .info .info-flex .foot-right .media-block .circle img {
   margin: auto;
 }
 .footer .footLine {
-  width: 100%;
   height: 1px;
   color: rgba(255, 255, 255, 0.502972);
   alignment: center;
   mix-blend-mode: normal;
   opacity: 0.1;
-  margin: 0 0 42px 0;
+}
+@media (max-width: 1199.8px) {
+  .footer .footLine {
+    margin: 0 20px;
+  }
 }
 .footer .copyright {
   font-family: "Montserrat", sans-serif;
@@ -445,7 +459,12 @@
   font-size: 16px;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.502972);
-  margin: 0;
+  margin: 16px 0 0 0;
+}
+@media (max-width: 1199.8px) {
+  .footer .copyright {
+    margin: 16px 20px 0 20px;
+  }
 }
 
 .navigation {
@@ -691,27 +710,13 @@
 }
 @media (max-width: 767.8px) {
   .qualification h2 {
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
     transform-origin: left;
     margin-left: 30px;
   }
 }
 @media (max-width: 1199.8px) {
-  .qualification .list {
-    margin: 0 20px;
-  }
-}
-@media (max-width: 1023.8px) {
-  .qualification .list {
-    margin: 0 20px;
-  }
-}
-@media (max-width: 991.8px) {
-  .qualification .list {
-    margin: 0 20px;
-  }
-}
-@media (max-width: 767.8px) {
   .qualification .list {
     margin: 0 20px;
   }
@@ -737,12 +742,6 @@
   margin: 0 30px 30px;
 }
 @media (max-width: 1199.8px) {
-  .qualification .list .list__flex .content {
-    width: 30%;
-    flex: 0 1 30%;
-  }
-}
-@media (max-width: 1023.8px) {
   .qualification .list .list__flex .content {
     width: 30%;
     flex: 0 1 30%;
