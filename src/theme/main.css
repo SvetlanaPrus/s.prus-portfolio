@@ -156,22 +156,22 @@
   box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
-.comment .container, .comment .contact .contact-container, .contact .comment .contact-container {
+.comment .container {
   width: 604px;
 }
-.comment .container .icon-block, .comment .contact .contact-container .icon-block, .contact .comment .contact-container .icon-block {
+.comment .container .icon-block {
   display: flex;
   justify-content: flex-end;
 }
-.comment .container .icon-block a, .comment .contact .contact-container .icon-block a, .contact .comment .contact-container .icon-block a {
+.comment .container .icon-block a {
   display: inline-flex;
 }
-.comment .container .icon-block a img, .comment .contact .contact-container .icon-block a img, .contact .comment .contact-container .icon-block a img {
+.comment .container .icon-block a img {
   max-width: 25px;
   height: 25px;
   object-fit: contain;
 }
-.comment .container .comment-author, .comment .contact .contact-container .comment-author, .contact .comment .contact-container .comment-author {
+.comment .container .comment-author {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -180,7 +180,7 @@
   color: rgb(51, 51, 51);
   margin: 0 0 5px 0;
 }
-.comment .container .comment-title, .comment .contact .contact-container .comment-title, .contact .comment .contact-container .comment-title {
+.comment .container .comment-title {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -189,7 +189,7 @@
   color: rgba(51, 51, 51, 0.5);
   margin: 0 0 5px 0;
 }
-.comment .container .comment-text, .comment .contact .contact-container .comment-text, .contact .comment .contact-container .comment-text {
+.comment .container .comment-text {
   margin: 33px 0 0 0;
   padding: 20px;
   width: 564px;
@@ -220,17 +220,29 @@
 }
 
 .contact {
-  padding: 139px 0 128px 0;
+  padding: 80px 0;
+  display: flex;
 }
-.contact .contact-container {
-  height: 624px;
+.contact .content .content-flex {
+  display: flex;
+  justify-content: space-between;
 }
-.contact .contact-container .contact-form {
+@media (max-width: 1199.8px) {
+  .contact .content .content-flex {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 991.8px) {
+  .contact .content .content-flex {
+    justify-content: center;
+  }
+}
+.contact .content .content-flex .contact-form {
   width: 370px;
   display: inline-block;
   font-style: normal;
 }
-.contact .contact-container .contact-form p:first-child {
+.contact .content .content-flex .contact-form p:first-child {
   margin: 0;
   width: fit-content;
   padding: 0 9px 0 9px;
@@ -244,7 +256,7 @@
   text-transform: uppercase;
   color: rgb(51, 51, 51);
 }
-.contact .contact-container .contact-form .obs {
+.contact .content .content-flex .contact-form .obs {
   margin: 0 0 32px 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -253,7 +265,7 @@
   text-align: left;
   color: rgba(51, 51, 51, 0.5);
 }
-.contact .contact-container .contact-form h2 {
+.contact .content .content-flex .contact-form h2 {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 56px;
@@ -262,10 +274,9 @@
   padding: 39px 0 28px 0;
   margin: 0;
 }
-.contact .contact-container .contact-form input {
+.contact .content .content-flex .contact-form input {
   width: 100%;
   height: 48px;
-  margin-bottom: 32px;
   border: #DADADA solid 1px;
   border-radius: 3px;
   padding: 8px 16px;
@@ -275,7 +286,7 @@
   line-height: 32px;
   color: #DADADA;
 }
-.contact .contact-container .contact-form textarea {
+.contact .content .content-flex .contact-form textarea {
   width: 100%;
   height: 144px;
   border: #DADADA solid 1px;
@@ -288,7 +299,7 @@
   line-height: 32px;
   color: rgba(51, 51, 51, 0.5);
 }
-.contact .contact-container .contact-form .form__submit {
+.contact .content .content-flex .contact-form .form__submit {
   width: 170px;
   height: 48px;
   background-color: rgb(245, 166, 35);
@@ -304,25 +315,52 @@
   box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-.contact .contact-container .contact-form .form__submit:hover {
+.contact .content .content-flex .contact-form .form__submit:hover {
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
-.contact .contact-container .image .container__image {
+.contact .content .content-flex .image {
+  align-content: center;
+}
+@media (min-width: 1200px) {
+  .contact .content .content-flex .image {
+    zoom: 100%;
+  }
+}
+@media (max-width: 1199.8px) and (min-width: 1024px) {
+  .contact .content .content-flex .image {
+    zoom: 90%;
+  }
+}
+@media (max-width: 1023.8px) and (min-width: 992px) {
+  .contact .content .content-flex .image {
+    zoom: 80%;
+  }
+}
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .contact .content .content-flex .image {
+    display: none;
+  }
+}
+@media (max-width: 767.8px) {
+  .contact .content .content-flex .image {
+    display: none;
+  }
+}
+.contact .content .content-flex .image .container__image {
   width: 626px;
   height: 624px;
   display: flex;
-  align-items: center;
 }
-.contact .contact-container .image .container__image iframe {
+.contact .content .content-flex .image .container__image iframe {
   width: 570px;
   height: 528px;
   border-radius: 3px;
   padding: 48px 56px 48px 0;
   z-index: 10;
 }
-.contact .contact-container .image .container__image div {
+.contact .content .content-flex .image .container__image div {
   width: 570px;
   height: 624px;
   background: linear-gradient(135deg, #FFEBC9 0%, #F5A623 100%);
@@ -333,7 +371,7 @@
 
 .footer {
   background: rgb(51, 51, 51);
-  padding: 78px 0 37px 0;
+  padding: 80px 0 40px 0;
   display: flex;
 }
 @media (max-width: 1199.8px) {
@@ -544,7 +582,7 @@
 }
 
 .home {
-  padding: 365px 0 65px 0;
+  padding: 365px 0 80px 0;
   background: url("../images/home.jpg") no-repeat fixed center center;
   background-size: cover;
   display: flex;
@@ -674,7 +712,7 @@
 
 .qualification {
   background: rgb(255, 245, 228);
-  padding: 70px 0;
+  padding: 80px 0;
 }
 .qualification p:first-child {
   font-family: "Oswald", sans-serif;
@@ -799,32 +837,22 @@
 }
 
 .history {
-  margin: 70px 0;
+  margin: 80px 0;
   background: rgb(255, 255, 255);
-}
-@media (max-width: 1199.8px) {
-  .history {
-    margin: 70px 0 110px;
-  }
-}
-@media (max-width: 1199.8px) {
-  .history .story {
-    margin: 0 20px;
-  }
+  display: flex;
 }
 .history .story .story-flex {
   display: flex;
   justify-content: space-between;
-  margin: 0 -30px 0;
 }
 @media (max-width: 1199.8px) {
   .history .story .story-flex {
-    justify-content: center;
+    margin: 0 20px;
   }
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   .history .story .story-flex {
-    justify-content: left;
+    justify-content: center;
   }
 }
 .history .story .story-flex .left {
@@ -832,7 +860,27 @@
   background: linear-gradient(135deg, #FFEBC9 0%, #F5A623 100%);
   position: relative;
 }
-@media (max-width: 1199.8px) {
+@media (min-width: 1200px) {
+  .history .story .story-flex .left {
+    zoom: 100%;
+  }
+}
+@media (max-width: 1199.8px) and (min-width: 1024px) {
+  .history .story .story-flex .left {
+    zoom: 80%;
+  }
+}
+@media (max-width: 1023.8px) and (min-width: 992px) {
+  .history .story .story-flex .left {
+    zoom: 70%;
+  }
+}
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .history .story .story-flex .left {
+    display: none;
+  }
+}
+@media (max-width: 767.8px) {
   .history .story .story-flex .left {
     display: none;
   }
@@ -857,7 +905,6 @@
 .history .story .story-flex .right {
   width: 470px;
   font-style: normal;
-  margin: 0 30px 0;
 }
 .history .story .story-flex .right h2 {
   margin: 0 0 80px 0;
@@ -986,12 +1033,12 @@ body {
   box-sizing: border-box;
 }
 
-.container, .contact .contact-container {
+.container {
   width: 1170px;
   margin: 0 auto;
 }
 
-.flex-container, .feedbacks-container, .contact .contact-container, .navigation .bar .bar-flex, .home .home-flex {
+.flex-container, .feedbacks-container, .navigation .bar .bar-flex, .home .home-flex {
   display: flex;
   justify-content: space-between;
 }

@@ -1,7 +1,7 @@
 $breakpoints: (
         xs: 480px,
         sm: 576px, // Smartphone side
-        md: 768px, // Tablet vertical
+        md: 768px,
         lg: 992px, // Tablet vertical
         xl: 1024px,  // Tablet side
         xxl: 1200px, // Desktop
@@ -9,27 +9,27 @@ $breakpoints: (
 
 // ************************ Desktop first ***********************
 
-@mixin sm-u {  //small & up
+@mixin sm-u {  // minimal sm
   @media (min-width: map-get($breakpoints, sm)) {
     @content;
   }
 }
-@mixin md-u {  //middle & up
+@mixin md-u {  // minimal md
   @media (min-width: map-get($breakpoints, md)) {
     @content;
   }
 }
-@mixin lg-u {  //large & up
+@mixin lg-u {  // minimal lg
   @media (min-width: map-get($breakpoints, lg)) {
     @content;
   }
 }
-@mixin xl-u {  //x-large & up
+@mixin xl-u {  // minimal xl
   @media (min-width: map-get($breakpoints, xl)) {
     @content;
   }
 }
-@mixin xxl-u {  //xx-large & up
+@mixin xxl-u {  // minimal xxl
   @media (min-width: map-get($breakpoints, xxl)) {
     @content;
   }
@@ -37,27 +37,27 @@ $breakpoints: (
 
 // ************************ Only ***********************
 
-@mixin sm {
+@mixin sm { // sm - md
   @media (max-width: map-get($breakpoints, md) - .2px) and (min-width: map-get($breakpoints, sm)) {
     @content;
   }
 }
-@mixin md {
+@mixin md { // md - lg
   @media (max-width: map-get($breakpoints, lg) - .2px) and (min-width: map-get($breakpoints, md)) {
     @content;
   }
 }
-@mixin lg {
+@mixin lg { // lg - xl
   @media (max-width: map-get($breakpoints, xl) - .2px) and (min-width: map-get($breakpoints, lg)) {
     @content;
   }
 }
-@mixin xl {
+@mixin xl { // xl - xxl
   @media (max-width: map-get($breakpoints, xxl) - .2px) and (min-width: map-get($breakpoints, xl)) {
     @content;
   }
 }
-@mixin xxl {
+@mixin xxl { // xxl +
   @media (min-width: map-get($breakpoints, xxl)) {
     @content;
   }
@@ -65,27 +65,27 @@ $breakpoints: (
 
 // ************************ Mobile first ***********************
 
-@mixin xl-d {  //x-large and down
+@mixin xl-d {  // xxl and down
   @media (max-width: map-get($breakpoints, xxl) - .2px) {
     @content;
   }
 }
-@mixin lg-d {  //large and down
+@mixin lg-d {  // xl and down
   @media (max-width: map-get($breakpoints, xl) - .2px) {
     @content;
   }
 }
-@mixin md-d {  //middle and down
+@mixin md-d {  // lg and down
   @media (max-width: map-get($breakpoints, lg) - .2px) {
     @content;
   }
 }
-@mixin sm-d {  //small and down
+@mixin sm-d {  // md and down
   @media (max-width: map-get($breakpoints, md) - .2px) {
     @content;
   }
 }
-@mixin xs-d {  //x-small and down
+@mixin xs-d {  // sm and down
   @media (max-width: map-get($breakpoints, sm) - .2px) {
     @content;
   }
