@@ -13,7 +13,7 @@
   transition: transform .3s ease;
 }
 
-.feedback__card:nth-last-child(-n+3) {
+.feedback__card:last-child {
   margin-bottom: 0;
 }
 

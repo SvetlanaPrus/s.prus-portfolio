@@ -17,6 +17,7 @@ function Card({ author }) {
   });
 
   const [isOpen, setIsOpen] = useState(false);
+
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
@@ -46,7 +47,13 @@ function Card({ author }) {
           </p>
         </div>
       </animated.div>
-      {isOpen === true ? <ModalFeedback author={author} handleClick={handleClick} /> : null}
+      {isOpen === true ? (
+        <ModalFeedback
+          author={author}
+          handleClick={handleClick}
+        />
+      )
+        : null}
     </>
   );
 }

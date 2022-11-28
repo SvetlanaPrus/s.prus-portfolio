@@ -1,14 +1,14 @@
+@charset "UTF-8";
 .about-section {
-  padding: 68px 0 85px 0;
+  padding: 70px 0;
   background-color: rgb(255, 245, 228);
+  display: flex;
 }
-
-.about-section__header {
+.about-section .about-section__header {
   width: 570px;
   margin: auto;
 }
-
-.about-section__header p:first-child {
+.about-section .about-section__header p:first-child {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -23,8 +23,7 @@
   flex-grow: 0;
   margin: 0;
 }
-
-.about-section__header p:last-child {
+.about-section .about-section__header p:last-child {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -37,8 +36,7 @@
   flex-grow: 0;
   margin: 0;
 }
-
-.about-section__title {
+.about-section .about-section__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -49,13 +47,23 @@
   padding: 8px 0 28px 0;
   margin: 0;
 }
-
-.feedbacks-container {
+@media (max-width: 1199.8px) {
+  .about-section .feedback {
+    margin: 0 20px 30px;
+  }
+}
+.about-section .feedback .feedback__flex {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 70px;
 }
-
-.feedbacks-container a {
+@media (max-width: 1199.8px) {
+  .about-section .feedback .feedback__flex {
+    justify-content: space-evenly;
+  }
+}
+.about-section .feedback .feedback__flex a {
   text-decoration: none;
 }
 
@@ -78,7 +86,7 @@
   transition: transform 0.3s ease;
 }
 
-.feedback__card:nth-last-child(-n+3) {
+.feedback__card:last-child {
   margin-bottom: 0;
 }
 
@@ -146,41 +154,58 @@
   color: rgba(51, 51, 51, 0.5);
 }
 
+.shadow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 9, 9, 0.6);
+  opacity: 1;
+  z-index: 999;
+  pointer-events: all;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .comment {
-  width: 750px;
-  height: auto;
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Должен быть выше чем у подложки*/
+  max-width: 750px;
   background-color: rgb(255, 245, 228);
   margin: 0 auto;
-  padding: 60px 90px 60px 90px;
+  padding: 35px;
   border-radius: 10px;
   box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
 }
-.comment .container {
-  width: 604px;
-}
-.comment .container .icon-block {
+.comment .button-wrapper {
   display: flex;
   justify-content: flex-end;
 }
-.comment .container .icon-block a {
-  display: inline-flex;
+.comment .button-wrapper button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
 }
-.comment .container .icon-block a img {
-  max-width: 25px;
-  height: 25px;
+.comment .button-wrapper button img {
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
-.comment .container .comment-author {
+.comment .comment-author {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   color: rgb(51, 51, 51);
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
-.comment .container .comment-title {
+.comment .comment-title {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -189,11 +214,11 @@
   color: rgba(51, 51, 51, 0.5);
   margin: 0 0 5px 0;
 }
-.comment .container .comment-text {
-  margin: 33px 0 0 0;
-  padding: 20px;
+.comment .comment-text {
+  margin: 35px 0 0 0;
+  padding: 35px;
   width: 564px;
-  height: 300px;
+  height: auto;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
@@ -202,21 +227,8 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
-  color: rgb(51, 51, 51);
-}
-
-.shadow {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(9, 9, 9, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  z-index: 999;
-  pointer-events: all;
-  display: flex;
-  align-items: center;
+  color: rgba(51, 51, 51, 0.5);
+  text-align: justify;
 }
 
 .contact {
@@ -1038,7 +1050,7 @@ body {
   margin: 0 auto;
 }
 
-.flex-container, .feedbacks-container, .navigation .bar .bar-flex, .home .home-flex {
+.flex-container, .navigation .bar .bar-flex, .home .home-flex {
   display: flex;
   justify-content: space-between;
 }

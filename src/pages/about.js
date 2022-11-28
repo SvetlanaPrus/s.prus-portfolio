@@ -14,12 +14,14 @@ export default function About() {
             people.” — Steve Jobs
           </p>
         </div>
-        <div className="feedbacks-container">
-          {
-                dataJson.map((item) => (
-                  <Card author={item} key={item.id} />
-                ))
-          }
+        <div className="feedback">
+          <div className="feedback__flex">
+            {
+              dataJson.map((item) => (
+                <Card author={item} key={item.id} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </section>
