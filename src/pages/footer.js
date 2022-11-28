@@ -40,23 +40,15 @@ export default function Footer() {
             <div className="foot-right">
               <p>Social media</p>
               <div className="media-block">
-
                 <a target="_blank" href="https://www.linkedin.com/in/svetlanaprus/" rel="noreferrer">
-                  <div className="circle">
-                    <img src={Linkedin} alt="linkedin" />
-                  </div>
+                  <div className="circle"><img src={Linkedin} alt="linkedin" /></div>
                 </a>
                 <a target="_blank" href="https://github.com/SvetlanaPrus" rel="noreferrer">
-                  <div className="circle">
-                    <img src={GitHub} alt="github" />
-                  </div>
+                  <div className="circle"><img src={GitHub} alt="github" /></div>
                 </a>
                 <a target="_blank" href="https://gitlab.com/SvetlanaPrus" rel="noreferrer">
-                  <div className="circle">
-                    <img src={GitLab} alt="gitlab" />
-                  </div>
+                  <div className="circle"><img src={GitLab} alt="gitlab" /></div>
                 </a>
-
               </div>
             </div>
           </div>

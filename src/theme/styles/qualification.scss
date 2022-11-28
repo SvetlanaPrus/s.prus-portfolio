@@ -99,6 +99,7 @@
        }
 
        & p {
+         width: 247px;
          margin: 0;
          font-family: $font-Montserrat;
          font-style: normal;
@@ -107,19 +108,25 @@
          line-height: 32px;
          color: $grey-dark;
 
+         @include xl-d {
+           width: 340px;
+         }
+         @include md-d {
+           width: 400px;
+         }
+
          & ul {
+           width: 247px;
            margin: 0;
            padding: 0;
+
+           @include xl-d {
+             width: 340px;
+           }
+           @include md-d {
+             width: 400px;
+           }
          }
-       }
-
-       //& p:nth-child(3){
-       //  width: 257px;
-       //}
-
-       & p:last-child {
-         width: 246px;
-         text-align: justify;
        }
 
        & ul {
@@ -131,6 +138,10 @@
          line-height: 32px;
          color: $grey-dark;
        }
+     }
+
+     & .content:last-child{
+       text-align: justify;
      }
    }
  }

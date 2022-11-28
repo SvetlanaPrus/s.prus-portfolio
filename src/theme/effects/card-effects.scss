@@ -1,7 +1,7 @@
 .feedback__card:hover,
 .feedback__card:focus {
     cursor: pointer;
-    background: $yellow-dark;
+    background: linear-gradient(275deg, #FFEBC9 0%, #F5A623 100%);
     transform: perspective(1000px) translate3d(0, 0, 50px);
     box-shadow: -3px -3px 35px rgba(85, 85, 85, 0.7);
 }
