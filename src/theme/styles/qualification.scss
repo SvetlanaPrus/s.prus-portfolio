@@ -113,8 +113,13 @@
          }
        }
 
-       & p:nth-child(3){
-         width: 257px;
+       //& p:nth-child(3){
+       //  width: 257px;
+       //}
+
+       & p:last-child {
+         width: 246px;
+         text-align: justify;
        }
 
        & ul {

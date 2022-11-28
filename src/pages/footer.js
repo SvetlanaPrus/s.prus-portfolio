@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { animated, useSpring } from 'react-spring';
+import GitHub from '../theme/images/github.svg';
+import GitLab from '../theme/images/gitlab.svg';
+import Linkedin from '../theme/images/linkedin.svg';
 import Phone from '../theme/images/phone.svg';
 import Mail from '../theme/images/mail.svg';
-import Facebook from '../theme/images/facebook.svg';
-import Twitter from '../theme/images/twitter.svg';
-import Instagram from '../theme/images/instagram.svg';
 
 export default function Footer() {
   const [isScroll, setIsScroll] = useState(false);
@@ -40,15 +40,23 @@ export default function Footer() {
             <div className="foot-right">
               <p>Social media</p>
               <div className="media-block">
-                <a className="facebook" href="#top">
-                  <div className="circle"><img src={Facebook} alt="facebook" /></div>
+
+                <a target="_blank" href="https://www.linkedin.com/in/svetlanaprus/" rel="noreferrer">
+                  <div className="circle">
+                    <img src={Linkedin} alt="linkedin" />
+                  </div>
                 </a>
-                <a className="twitter" href="#top">
-                  <div className="circle"><img src={Twitter} alt="twitter" /></div>
+                <a target="_blank" href="https://github.com/SvetlanaPrus" rel="noreferrer">
+                  <div className="circle">
+                    <img src={GitHub} alt="github" />
+                  </div>
                 </a>
-                <a className="instagram" href="#top">
-                  <div className="circle"><img src={Instagram} alt="instagram" /></div>
+                <a target="_blank" href="https://gitlab.com/SvetlanaPrus" rel="noreferrer">
+                  <div className="circle">
+                    <img src={GitLab} alt="gitlab" />
+                  </div>
                 </a>
+
               </div>
             </div>
           </div>

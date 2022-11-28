@@ -41,22 +41,23 @@
         display: inline-flex;
 
         .circle {
-          width: 48px;
-          height: 48px;
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
           background-color: $grey-mid;
-          display: flex;
-          cursor: pointer;
-          margin-right: 16px;
           box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
+          display: flex;
+          margin-right: 16px;
 
           @include sm-d {
             display: none;
           }
+        }
 
-          img {
-            margin: auto;
-          }
+        & .circle:hover, .circle:focus {
+          cursor: pointer;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px 2px $white-light;
         }
 
         & button:hover, button:focus {
