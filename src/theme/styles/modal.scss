@@ -1,33 +1,51 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
 
+.shadow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9,9,9,0.6);
+  opacity: 1;
+  z-index: 999;
+  pointer-events: all;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .comment {
-  width: 750px;
-  height: auto;
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Должен быть выше чем у подложки*/
+
+  max-width: 750px;
   background-color: $yellow-light;
   margin: 0 auto;
-  padding: 60px 90px 60px 90px;
+  padding: 35px;
   border-radius: 10px;
   box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
 
-  & .container {
-    width: 604px;
+  & .button-wrapper {
+    display: flex;
+    justify-content:flex-end;
 
-    & .icon-block {
-      display:flex;
-      justify-content:flex-end;
+    & button {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      cursor:pointer;
 
-      & a {
-        display: inline-flex;
-
-        & img {
-          max-width: 25px;
-          height: 25px;
-          object-fit: contain;
-        }
+      & img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
       }
     }
+  }
 
     & .comment-author {
       font-family: $font-Oswald;
@@ -36,7 +54,7 @@
       font-size: 24px;
       line-height: 32px;
       color: $black;
-      margin: 0 0 5px 0;
+      margin: 0 0 10px 0;
     }
 
     & .comment-title {
@@ -50,10 +68,10 @@
     }
 
     & .comment-text {
-      margin: 33px 0 0 0;
-      padding: 20px;
+      margin: 35px 0 0 0;
+      padding: 35px;
       width: 564px;
-      height: 300px;
+      height: auto;
       border-radius: 10px;
       background-color: $white;
       box-shadow: 0 24px 38px rgba(0, 0, 0, 0.07), 0 9px 46px rgba(0, 0, 0, 0.06), 0 11px 15px rgba(0, 0, 0, 0.1);
@@ -63,21 +81,9 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 32px;
-      color: $black;
+      color: $grey-mid;
+      text-align:justify;
     }
-  }
 }
 
-.shadow {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(9,9,9,0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  z-index: 999;
-  pointer-events: all;
-  display: flex;
-  align-items:center;
-}
+

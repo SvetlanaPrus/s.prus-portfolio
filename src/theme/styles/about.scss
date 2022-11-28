@@ -1,67 +1,86 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
+@import "../vars/_breakpoints.scss";
 
 .about-section {
-  padding: 68px 0 85px 0;
+  padding: 70px 0;
   background-color: $yellow-light;
+  display: flex;
+
+  .about-section__header {
+    width: 570px;
+    margin: auto;
+  }
+
+  .about-section__header p:first-child {
+    font-family: $font-Oswald;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $black;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0;
+  }
+
+  .about-section__header p:last-child {
+    font-family: $font-Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: $grey-mid;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0;
+  }
+
+  .about-section__title {
+    font-family: $font-Oswald;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 55px;
+    text-align: center;
+    color: $black;
+    padding: 8px 0 28px 0;
+    margin: 0;
+  }
+
+  & .feedback {
+    @include xl-d {
+      margin: 0 20px 30px;
+    }
+
+    & .feedback__flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between;
+      padding-top: 70px;
+
+      @include xl-d {
+        justify-content:space-evenly;
+      }
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-.about-section__header {
-  width: 570px;
-  margin: auto;
-}
 
-.about-section__header p:first-child {
-  font-family: $font-Oswald;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 32px;
-  text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $black;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0;
-}
 
-.about-section__header p:last-child {
-  font-family: $font-Montserrat;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  text-align: center;
-  color: $grey-mid;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 0;
-}
 
-.about-section__title {
-  font-family: $font-Oswald;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 55px;
-  text-align: center;
-  color: $black;
-  padding: 8px 0 28px 0;
-  margin: 0;
-}
 
-.feedbacks-container {
-  @extend .flex-container;
-  flex-wrap: wrap;
-  padding-top: 70px;
-}
 
-.feedbacks-container a {
-  text-decoration: none;
-}
 
 
 
