@@ -58,6 +58,26 @@
   width: 970px;
   margin: 0 auto;
 }
+@media (max-width: 1023.8px) {
+  .carousel-root {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 991.8px) {
+  .carousel-root {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 767.8px) {
+  .carousel-root {
+    transform: scale(0.7);
+  }
+}
+@media (max-width: 575.8px) {
+  .carousel-root {
+    transform: scale(0.6);
+  }
+}
 
 .carousel {
   position: relative;
@@ -87,6 +107,11 @@
 .carousel .thumbs-wrapper {
   margin: 20px;
   overflow: hidden;
+}
+@media (max-width: 1023.8px) {
+  .carousel .thumbs-wrapper {
+    display: none;
+  }
 }
 .carousel .thumbs-wrapper ul {
   padding: 0;

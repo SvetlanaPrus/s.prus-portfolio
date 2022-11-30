@@ -15,8 +15,7 @@ function ModalFeedback({ author, handleClick }) {
           {author.name}
           {' '}
           {author.surname}
-          {' '}
-          about me:
+          :
         </p>
         <p className="comment-title">
           {author.title}
@@ -37,7 +36,12 @@ function ModalFeedback({ author, handleClick }) {
             : null}
         </p>
         <p className="comment-text">
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          "...
+          {' '}
           {author.comment}
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          "
         </p>
       </section>
     </div>

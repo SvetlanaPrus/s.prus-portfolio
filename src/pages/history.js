@@ -41,7 +41,7 @@ export default function History() {
                 <div className="circle"><img src={ArrowRight} alt="arrow" /></div>
                 Download CV
                 <br />
-                (Last updated: August 2022)
+                (Last updated: November 2022)
               </a>
             </div>
           </div>

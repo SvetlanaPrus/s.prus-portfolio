@@ -1,0 +1,156 @@
+{
+  "short_name": "Prof",
+  "name": "Profile-CV",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/cross.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "images/double-up.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "images/endorsement.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/facebook.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/full-stack-developer.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/github.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/gitlab.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/linkedin.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/mail.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/online-education.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/phone.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/profile-girl.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/angle-right.png",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/angle-right-16.png",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Anuradha.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/banner.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/billing-system.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/dmytro.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/galja.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/history.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/home.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/ivan.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/kanban-1.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/kanban-2.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/kim.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/memo.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/online-english-school.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/profile.JPG",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/record-system.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/shopping-list.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/tips-and-tricks.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/to-do-list.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/to-do-list-2.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/weather.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/william.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/CV.pdf",
+      "type": "image/pdf"
+    }
+  ]
+
+
+
+}

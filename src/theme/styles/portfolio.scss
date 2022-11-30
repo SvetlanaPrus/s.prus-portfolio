@@ -1,47 +1,72 @@
 @import "../vars/_colors";
 @import "../vars/_fonts";
+@import "../vars/_breakpoints.scss";
 
 .portfolio {
-  padding: 45px 0 65px 0;
+  padding: 45px 0;
+  display: flex;
 
-  & .portfolio-section__header {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    font-style: normal;
+  @include xl-d {
+    margin: 0 20px;
+    justify-content:space-evenly;
+  }
+  @include md-d {
+    padding: 45px 0 20px;
+  }
+  @include sm-d {
+    padding: 45px 0 0;
+  }
 
-    & h2 {
-      font-family: $font-Oswald;
-      font-weight: 700;
-      font-size: 56px;
-      line-height: 64px;
-      color: $black;
-      padding: 0;
-      margin: 0 0 9px 0;
-    }
+  & .file {
+      & .portfolio-section__header {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        font-style: normal;
 
-    & p {
-      margin: 0 0 50px 0;
-      width: calc(5 * 70px + 4 * 30px);
-      font-family: $font-Montserrat;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 32px;
-      text-align: center;
-      color: $grey-dark;
-    }
+        & h2 {
+          font-family: $font-Oswald;
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 64px;
+          color: $black;
+          padding: 0;
+          margin: 0 0 9px 0;
+        }
 
-    & p:first-child {
-      width: auto;
-      font-family: $font-Oswald;
-      font-weight: 300;
-      font-size: 18px;
-      letter-spacing: 2px;
-      color: $black;
-      background: $yellow-light;
-      border-radius: 3px;
-      padding: 0 7px;
-      margin: 0 0 22px 0;
-    }
+        & p {
+          margin: 0 0 50px 0;
+          width: calc(5 * 70px + 4 * 30px);
+          font-family: $font-Montserrat;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+          text-align: center;
+          color: $grey-dark;
+
+          @include lg-d {
+            margin: 0 0 25px 0;
+          }
+          @include md-d {
+            margin: 0 0 0 0;
+          }
+          @include sm-d {
+            margin: 0;
+          }
+        }
+
+        & p:first-child {
+          width: auto;
+          font-family: $font-Oswald;
+          font-weight: 300;
+          font-size: 18px;
+          letter-spacing: 2px;
+          color: $black;
+          background: $yellow-light;
+          border-radius: 3px;
+          padding: 0 7px;
+          margin: 0 0 22px 0;
+        }
+      }
   }
 }

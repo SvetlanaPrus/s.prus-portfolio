@@ -5,44 +5,36 @@
 .qualification {
   background: $yellow-light;
   padding: 80px 0;
+  display: flex;
 
-  & p:first-child {
-    font-family: $font-Oswald;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 32px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: $black;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0 0 20px 0;
+  & .qualification__header {
+    margin: auto;
 
-    @include sm-d {
-      display: flex;
-      transform-origin: left;
-      margin-left: 30px;
+    & p:first-child {
+      font-family: $font-Oswald;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $black;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      margin: 0 0 20px 0;
     }
-  }
 
-  & h2 {
-    font-family: $font-Oswald;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 55px;
-    text-align: center;
-    color: $black;
-    margin: 0 0 60px 0;
-
-    @include sm-d {
-      display: inline-flex;
-      flex-wrap: wrap;
-      transform-origin: left;
-      margin-left: 30px;
+    & h2 {
+      font-family: $font-Oswald;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 55px;
+      text-align: center;
+      color: $black;
+      margin: 0 0 60px 0;
     }
   }
 
@@ -99,6 +91,7 @@
        }
 
        & p {
+         width: 247px;
          margin: 0;
          font-family: $font-Montserrat;
          font-style: normal;
@@ -107,14 +100,25 @@
          line-height: 32px;
          color: $grey-dark;
 
+         @include xl-d {
+           width: 340px;
+         }
+         @include md-d {
+           width: 400px;
+         }
+
          & ul {
+           width: 247px;
            margin: 0;
            padding: 0;
-         }
-       }
 
-       & p:nth-child(3){
-         width: 257px;
+           @include xl-d {
+             width: 340px;
+           }
+           @include md-d {
+             width: 400px;
+           }
+         }
        }
 
        & ul {
@@ -126,6 +130,10 @@
          line-height: 32px;
          color: $grey-dark;
        }
+     }
+
+     & .content:last-child{
+       text-align: justify;
      }
    }
  }

@@ -7,6 +7,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -68,7 +69,11 @@ const plugins = () => {
         collapseWhitespace: isProd ? true : null,
       },
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      verbose: true,
+      // important elsewise minifest.json is deleted
+      cleanOnceBeforeBuildPatterns: ['**/*', '!manifest.json'],
+    }),
     // In order to copy static file =>
     // new CopyWebpackPlugin({
     //   patterns: [
@@ -83,6 +88,7 @@ const plugins = () => {
       filename: '[name].[chunkhash].css',
     }),
     () => (isDev ? new ESLintPlugin() : null),
+    new WebpackManifestPlugin({ template: '/manifest.json' }),
   ];
   // For analyze libraries; check port:8888 =>
   // if (isProd) {
@@ -116,6 +122,7 @@ module.exports = {
   },
   output: {
     // With optimization, we should use [name] =>
+    // Instead of a version number, we specify the file hash =>
     filename: '[name].[chunkhash].js', // название создаваемого файла, by default - main.js
     path: path.resolve(__dirname, 'dist'), // путь к каталогу выходных файлов
   },
