@@ -4,6 +4,7 @@
 @import "./_variables.scss";
 @import "../../theme/vars/_fonts";
 @import "../../theme/vars/_colors";
+@import "../../theme/vars/_breakpoints.scss";
 
 %arrows {
   @include transition(all, 0.25s, ease-in);
@@ -56,6 +57,19 @@
   outline: none;
   width: calc(10*70px + 9*30px);
   margin: 0 auto;
+
+  @include lg-d {
+    transform: scale(0.9);
+  }
+  @include md-d {
+    transform: scale(0.8);
+  }
+  @include sm-d {
+    transform: scale(0.7);
+  }
+  @include xs-d {
+    transform: scale(0.6);
+  }
 }
 
 .carousel {
@@ -92,6 +106,10 @@
   .thumbs-wrapper {
     margin: 20px;
     overflow: hidden;
+
+    @include lg-d {
+      display: none;
+    }
 
     ul {
       padding: 0;

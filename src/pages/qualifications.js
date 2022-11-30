@@ -8,8 +8,10 @@ export default function Qualification() {
   return (
     <section className="qualification">
       <div className="container">
-        <p>ABOUT ME</p>
-        <h2>Let`s get acquainted</h2>
+        <div className="qualification__header">
+          <p>ABOUT ME</p>
+          <h2>Let`s get acquainted</h2>
+        </div>
         <div className="list">
           <div className="list__flex">
             <div className="content">
@@ -21,7 +23,7 @@ export default function Qualification() {
                 <li>HTML, CSS, SCSS, SASS, Figma</li>
                 <li>Javascript, jQuery, React</li>
                 <li>Bootstrap, Material UI</li>
-                <li>Webpack, GitHub, GitLab</li>
+                <li>Webpack, GitHub, GitLab, Lighthouse</li>
               </ul>
               <p><strong>Some experience:</strong></p>
               <p>Typescript, Tailwind CSS, API, Redux, MobX ...</p>

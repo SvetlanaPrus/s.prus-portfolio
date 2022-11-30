@@ -87,7 +87,10 @@
             @include xl-d {
               margin: 0 0 80px;
             }
-          }
+            @include xs-d {
+              width: 90%;
+            }
+        }
 
         & .btn-arrow {
           text-decoration: none;
